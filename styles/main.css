@@ -16,9 +16,10 @@ ul {
   display: flex;
 }
 
-/* Icon margin */
-li {
-  margin: 15px;
+/* Icon size */
+a {
+  font-size: calc(25px + .7vw);
+  margin: 30px;
 }
 
 /* Icon non-hover style */
@@ -54,7 +55,7 @@ i:hover {
 .progress {
   background: linear-gradient(to right, #88498f var(--scroll), transparent 0);
   background-repeat: no-repeat;
-  height: 4px;
+  height: 7px;
   position: fixed;
   width: 100%;
   z-index: 1;
@@ -84,6 +85,6 @@ i:hover {
 h1 {
   color: #fff;
   font-family: 'Libre Franklin', sans-serif;
-  font-size: 25vw;
+  font-size: calc(65px + 10vw);
   font-weight: bold;
 }
