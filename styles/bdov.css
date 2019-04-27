@@ -9,6 +9,10 @@ body {
 }
 
 /* White content color */
+a {
+  margin: 15px;
+}
+
 a,
 a:hover,
 .container-fluid {
@@ -18,6 +22,16 @@ a:hover,
 /* H1 font */
 h1 {
   font-family: 'Libre Franklin', sans-serif;
+}
+
+/* Responsive text sizing */
+.text-responsive {
+  font-size: calc(100% + 4vw + 4vh);
+}
+
+/* Responsive icon sizing */
+.icon-responsive {
+  font-size: calc(10px + .7vw);
 }
 
 /* Title section */
