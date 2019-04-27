@@ -7,7 +7,7 @@ var h = document.documentElement,
   b = document.body,
   st = 'scrollTop',
   sh = 'scrollHeight',
-  progress = document.querySelector('.progress'),
+  progress = document.querySelector('.scroll'),
   scroll;
 
 document.addEventListener('scroll', function() {
