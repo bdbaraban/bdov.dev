@@ -1,3 +1,8 @@
+//
+// Dynamically calculates scroll position.
+// Sets CSS variable --scroll.
+//
+
 var h = document.documentElement,
   b = document.body,
   st = 'scrollTop',
