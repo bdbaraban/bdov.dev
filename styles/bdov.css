@@ -1,0 +1,68 @@
+/*
+ * === Main CSS3 Style ===
+ */
+
+/* Web page fills screen */
+html,
+body {
+  height: 100%;
+}
+
+/* White content color */
+a,
+a:hover,
+.container-fluid {
+  color: #fff;
+}
+
+/* H1 font */
+h1 {
+  font-family: 'Libre Franklin', sans-serif;
+}
+
+/* Title section */
+.title {
+  background-color: #0b3c5d;
+}
+
+/* Professional section */
+.professional {
+  background-color: #503b31;
+}
+
+/* Writing section */
+.writing {
+  background-color: #d9b310;
+}
+
+/* Social section */
+.social {
+  background-color: #1d2731;
+}
+
+/* Hover grow animation */
+.hvr-grow {
+  backface-visibility: hidden;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  display: inline-block;
+  -moz-osx-font-smoothing: grayscale;
+  opacity: .8;
+  transform: translateZ(0);
+  transition-duration: 0.3s;
+  transition-property: transform;
+  vertical-align: middle;
+}
+.hvr-grow:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+/* JavaScript-powered scroll progress bar */
+.scroll {
+  background: linear-gradient(to right, #88498f var(--scroll), transparent 0);
+  background-repeat: no-repeat;
+  height: 4px;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
