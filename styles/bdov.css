@@ -24,6 +24,12 @@ h1 {
   font-family: 'Libre Franklin', sans-serif;
 }
 
+/* img size */
+img {
+  width: 35vw;
+  min-width: 175px;
+}
+
 /* Responsive text sizing */
 .text-responsive {
   font-size: calc(100% + 4vw + 4vh);
