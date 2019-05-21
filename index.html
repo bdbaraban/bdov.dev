@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>bdov.dev</title>
+
+    <!-- Font Awesome-->
+    <link rel="stylesheet"
+          href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+          integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+          crossorigin="anonymous">
+    <!-- Bulma CSS -->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="_javascript/dynamic.js"></script>
+  </head>
+
+  <body>
+    <!-- Progress bar -->
+    <div class="scroll"></div>
+
+    <!-- bdov.dev -->
+    <section class="hero is-primary is-fullheight">
+      <div class="hero-head"></div>
+      <div class="hero-body">
+        <div class="container is-inline-flex-tablet site-title">
+          <div class="columns is-mobile">
+            <h1 class="title is-1 has-text-grey entry-slide full-stack">Full-Stack</h1>
+            <h1 class="title is-2 has-text-grey entry-slide web-developer">
+              <br>Web Developer
+            </h1>
+          </div>
+          <div class="columns is-mobile">
+            <h1 class="title is-1 has-text-white bdov">bdov</h1>
+            <h1 class="title is-2 has-text-white dev"><br>.dev</h1>
+          </div>
+        </div>
+      </div>
+      <div class="hero-foot has-text-centered">
+        <a href="#work" class="icon is-medium has-text-white" aria-label="To work section" id="scroll-to-work">
+          <i class="fas fa-angle-down fa-2x" aria-hidden="true"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- Work -->
+    <section class="hero is-warning is-fullheight" id="work">
+      <div class="hero-head"></div>
+
+      <div class="hero-body">
+        <div class="container">
+          <div class="columns is-desktop is-vcentered">
+
+            <!-- Icon slider -->
+            <div class="column is-full-touch is-one-third-desktop">
+              <div class="column is-inline-flex slider" id="work-slider">
+                <div class="column is-marginless reveal">
+                  <a href="https://github.com/bdbaraban"
+                     class="icon is-large has-text-white hvr-grow"
+                     target="_blank">
+                    <i class="fab fa-github fa-3x"></i>
+                  </a>
+                </div>
+                <div class="column is-marginless reveal">
+                  <a href="https://www.linkedin.com/in/bdbaraban/"
+                     class="icon is-large has-text-white hvr-grow"
+                     target="_blank">
+                    <i class="fab fa-linkedin fa-3x"></i>
+                  </a>
+                </div>
+                <div class="column is-marginless reveal">
+                  <a href="mailto:375@holbertonschool.com"
+                     class="icon is-large has-text-white hvr-grow"
+                     target="_top">
+                     <i class="fas fa-envelope fa-3x"></i>
+                  </a>
+                </div>
+                <h2 class="title is-2 has-text-white">Work</h2>
+              </div>
+            </div>
+
+            <!-- Tiles -->
+            <div class="column is-full-touch is-two-thirds-desktop">
+              <div class="columns is-centered">
+                <div class="column">
+                  <div class="tile is-ancestor">
+
+                    <!-- Left tiles -->
+                    <div class="tile is-parent is-vertical">
+
+                      <!-- Top left tile -->
+                      <article class="tile is-child card">
+                        <header class="card-header">
+                          <h2 class="card-header-title">HolbertonBnB 🏠</h2>
+                          <a href="https://github.com/bdbaraban/AirBnB_clone_v4"
+                            class="card-header-icon has-text-warning"
+                            target="_blank">
+                            <span class="icon is-medium">
+                              <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+                            </span>
+                          </a>
+                        </header>
+                        <div class="card-content">
+                          <div class="content">
+                            A clone of AirBnB, including both a complete front-end/back-end website as well as a RESTful API. Pair programmed over four versions and manually deployed with Flask and Gnuicorn over Nginx.
+                          </div>
+                        </div>
+                        <footer class="card-footer">
+                          <div class="card-footer-item">Python/Flask/SQLAlchemy</div>
+                          <div class="card-footer-item">MySQL</div>
+                          <div class="card-footer-item">HTML5/CSS3</div>
+                          <div class="card-footer-item">JS/jQuery</div>
+                          <div class="card-footer-item">Nginx/Gnuicorn</div>
+                        </footer>
+                      </article>
+
+                      <!-- Bottom left tile -->
+                      <article class="tile is-child card">
+                        <header class="card-header">
+                          <h2 class="card-header-title">MLB Tweets ⚾</h2>
+                          <a href="https://github.com/bdbaraban/mlb_tweets"
+                            class="card-header-icon has-text-warning"
+                            target="_blank">
+                            <span class="icon is-medium">
+                              <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+                            </span>
+                          </a>
+                        </header>
+                        <div class="card-content">
+                          <div class="content">
+                            MLB Twitter lists website built using a Flask back-end and an HTML Bootstrap static front-end. Dynamically updates lists and league standings using the Twitter API and <a href="https://erikberg.com/api" target="_blank">Erik Berg's xmlstats</a> API, respectively.
+                          </div>
+                        </div>
+                        <footer class="card-footer">
+                          <div class="card-footer-item">Python/Flask</div>
+                          <div class="card-footer-item">HTML5/CSS3</div>
+                          <div class="card-footer-item">Bootstrap 4</div>
+                          <div class="card-footer-item">JS/jQuery</div>
+                        </footer>
+                      </article>
+
+                    </div>
+
+                    <!-- Right tiles -->
+                    <div class="tile is-parent is-vertical">
+
+                      <!-- Top right tile -->
+                      <article class="tile is-child card">
+                        <header class="card-header">
+                          <h2 class="card-header-title">Twenty Timer 👁️</h2>
+                          <a href="https://github.com/bdbaraban/twenty_timer"
+                            class="card-header-icon has-text-warning"
+                            target="_blank">
+                            <span class="icon is-medium">
+                              <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+                            </span>
+                          </a>
+                        </header>
+                        <div class="card-content">
+                          <div class="content">
+                            A minimalist 20-20-20 eye care timer built in React Native Expo. Alerts 20-second breaks at 20-minute intervals. My first project working on mobile, and with React.
+                          </div>
+                        </div>
+                        <footer class="card-footer">
+                          <div class="card-footer-item">React Native/Expo</div>
+                          <div class="card-footer-item">JavaScript</div>
+                        </footer>
+                      </article>
+
+                      <!-- Bottom right tile -->
+                      <article class="tile is-child card">
+                        <header class="card-header">
+                          <h2 class="card-header-title">Shellby 🐚</h2>
+                          <a href="https://github.com/bdbaraban/simple_shell"
+                            class="card-header-icon has-text-warning"
+                            target="_blank">
+                            <span class="icon is-medium">
+                              <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+                            </span>
+                          </a>
+                        </header>
+                        <div class="card-content">
+                          <div class="content">
+                            A simple UNIX command interpreter written in the C programming language, pair programmed over the course of one week.
+                          </div>
+                        </div>
+                        <footer class="card-footer">
+                          <div class="card-footer-item">C</div>
+                          <div class="card-footer-item">Linux/Unix</div>
+                        </footer>
+                      </article>
+
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer down arrow -->
+      <div class="hero-foot has-text-centered">
+        <a href="#blog" class="icon is-medium has-text-white" aria-label="To blog section" id="scroll-to-blog">
+          <i class="fas fa-angle-down fa-2x" aria-hidden="true"></i>
+        </a>
+      </div>
+
+    </section>
+
+    <!-- Blog -->
+    <section class="hero is-info is-fullheight" id="blog">
+      <div class="hero-head"></div>
+
+      <div class="hero-body">
+        <div class="container">
+          <div class="columns is-desktop is-vcentered">
+
+            <!-- Icon slider -->
+            <div class="column is-full-touch is-one-third desktop">
+              <div class="column is-inline-flex slider" id="blog-slider">
+                <div class="column is-marginless reveal">
+                  <a href="https://medium.com/@bdov_"
+                     class="icon is-large has-text-white hvr-grow"
+                     target="_blank">
+                    <i class="fab fa-medium fa-3x"></i>
+                  </a>
+                </div>
+                <h2 class="title is-2 has-text-white">Blog</h2>
+              </div>
+            </div>
+
+            <!-- Tiles -->
+            <div class="column is-full-touch is-two-thirds-desktop">
+              <div class="columns is-centered">
+                <div class="column">
+                  <div class="tile is-ancestor">
+
+                    <!-- Left tiles -->
+                    <div class="tile is-parent is-vertical">
+
+                      <!-- Top left tile -->
+                      <article class="tile is-child card">
+                        <div class="card-content">
+                          <h4 class="title is-4">
+                            <a href="https://medium.com/@bdov_/my-major-is-american-studies-9cb043853a6d" target="_blank">
+                              My Major is American Studies.
+                            </a>
+                          </h4>
+                          <div class="content">
+                            I know what you’re thinking: What are you going to do with that?
+                          </div>
+                          <div class="card-footer">
+                            <time class="card-footer-item" datetime="2018-01-19">January 19, 2018 - 4 min read</time>
+                          </div>
+                        </div>
+                      </article> 
+
+                      <!-- Bottom left tile -->
+                      <article class="tile is-child card">
+                        <div class="card-content">
+                          <h4 class="title is-4">
+                            <a href="https://medium.com/@bdov_/what-happens-when-you-type-fill-in-the-blank-website-into-a-browser-and-hit-enter-739702df3999" target="_blank">
+                              Answering the Classic Web Infrastructure Question: What Happens When You Type [Fill-in-the-Blank-Website] Into a Browser and Hit Enter?
+                            </a>
+                          </h4>
+                          <div class="content">
+                            The question is a classic of web infrastructure expertise - what happens when you type [insert generic website here] and hit Enter?
+                          </div>
+                          <div class="card-footer">
+                            <time class="card-footer-item" datetime="2019-04-14">April 14, 2019 - 19 min read</time>
+                          </div>
+                        </div>
+                      </article> 
+
+                    </div>
+
+                    <!-- Right tiles -->
+                    <div class="tile is-parent is-vertical">
+
+                      <!-- Top right tile -->
+                      <article class="tile is-child card">
+                        <div class="card-content">
+                          <h4 class="title is-4">
+                            <a href="https://medium.com/@bdov_/https-medium-com-bdov-python-objects-part-iii-string-interning-625d3c7319de" target="_blank">
+                              Python Objects Part III: String Interning
+                            </a>
+                          </h4>
+                          <div class="content">
+                            A full understanding of Python object instantiation requires an examination of one last relevant implementation - string interning.
+                          </div>
+                          <div class="card-footer">
+                            <time class="card-footer-item" datetime="2019-01-15">January 15, 2019 - 10 min read</time>
+                          </div>
+                        </div>
+                      </article>
+
+                      <!-- Bottom right tile -->
+                      <article class="tile is-child card">
+                        <div class="card-content">
+                          <h4 class="title is-4">
+                            <a href="https://medium.com/@bdov_/javascript-typescript-execution-vs-lexical-vs-variable-environment-37ff3f264831" target="_blank">
+                              JavaScript/TypeScript Internals: Execution vs. Lexical vs. Variable Environment
+                            </a>
+                          </h4>
+                          <div class="content">
+                            In this, my first blog post focusing on the language, I'd like to dive into an important fundamental concept driving how JavaScript works - execution environment. 
+                          </div>
+                          <div class="card-footer">
+                            <time class="card-footer-item" datetime="2019-05-06">May 6, 2019 - 7 min read</time>
+                          </div>
+                        </div>
+                      </article> 
+
+                    </div>
+
+                  </div>
+                </div>
+              </div> 
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer down arrow -->
+      <div class="hero-foot has-text-centered">
+        <a href="#social" class="icon is-medium has-text-white" aria-label="To social section" id="scroll-to-social">
+          <i class="fas fa-angle-down fa-2x" aria-hidden="true"></i>
+        </a>
+      </div>
+
+    </section>
+
+    <!-- Social -->
+    <section class="hero is-success is-fullheight" id="social">
+      <div class="hero-head"></div>
+
+      <div class="hero-body">
+        <div class="container">
+          <div class="columns is-desktop is-vcentered">
+
+            <!-- Icon slider -->
+            <div class="column is-full-touch is-one-third-desktop">
+              <div class="column is-inline-flex slider" id="social-slider">
+                <div class="column is-marginless reveal">
+                  <a href="https://twitter.com/bdov_"
+                     class="icon is-large has-text-white hvr-grow"
+                     target="_blank">
+                    <i class="fab fa-twitter fa-3x"></i>
+                  </a>
+                </div>
+                <div class="column is-marginless reveal">
+                  <a href="https://www.facebook.com/brennan.baraban"
+                     class="icon is-large has-text-white hvr-grow"
+                     target="_blank">
+                    <i class="fab fa-facebook fa-3x"></i>
+                  </a>
+                </div>
+                <div class="column is-marginless reveal">
+                  <a href="https://www.instagram.com/bdov_/"
+                     class="icon is-large has-text-white hvr-grow"
+                     target="_blank">
+                    <i class="fab fa-instagram fa-3x"></i>
+                  </a>
+                </div>
+                <h2 class="title is-2 has-text-white">Social</h2>
+              </div>
+            </div>
+
+            <!-- Tiles -->
+            <div class="column is-full-touch is-two-thirds-desktop">
+              <div class="columns is-centered">
+                <div class="column">
+                  <div class="tile is-ancestor">
+
+                    <!-- Left tiles -->
+                    <div class="tile is-parent is-vertical">
+
+                      <!-- Top left tile -->
+                      <article class="tile is-child card">
+                        <div class="card-image">
+                          <figure class="image is-2by1">
+                            <img src="https://pbs.twimg.com/media/DxfC1chVsAcf2ws?format=jpg&name=medium" alt="This school means a lot to me tweet picture">
+                          </figure>
+                        </div>
+                        <div class="card-content">
+                          <h4 class="content">
+                            "This school means a lot to me right now."
+                          </h4>
+                          <div class="card-footer">
+                            <time class="card-footer-item" datetime="2019-01-21">7:26 PM · Jan 21, 2019</time>
+                            <div class="card-footer-item">
+                              <a href="https://twitter.com/bdov_/status/1087552063494512640"
+                                class="card-header-icon"
+                                aria-label="Link to tweet"
+                                target="_blank">
+                                <span class="icon is-medium">
+                                  <i class="fab fa-twitter fa-2x" aria-hidden="true"></i>
+                                </span>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </article>
+
+                      <!-- Bottom left tile -->
+                      <article class="tile is-child card">
+                        <div class="card-content">
+                          <h4 class="content">
+                            "Love how Cohort 8 is fully embracing the Emacs-Vim debate. Go ahead and battle it out for a while, but eventually you’ll realize that Vim has had this war won and done for a while now."
+                          </h4>
+                          <div class="card-footer">
+                            <time class="card-footer-item" datetime="2019-02-20">3:16 PM · Feb 20, 2019</time>
+                            <div class="card-footer-item">
+                              <a href="https://twitter.com/bdov_/status/1098360865395363841"
+                                class="card-header-icon"
+                                aria-label="Link to tweet"
+                                target="_blank">
+                                <span class="icon is-medium">
+                                  <i class="fab fa-twitter fa-2x" aria-hidden="true"></i>
+                                </span>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </article>  
+
+                    </div>
+
+                    <!-- Right tiles -->
+                    <div class="tile is-parent is-vertical">
+
+                      <!-- Left tile -->
+                      <article class="tile is-child card">
+                        <div class="card-content">
+                          <h4 class="content">
+                            "My lifelong tech goal is to reach a point where you can broach a conversation with me on any software language, tool, or concept, and that I’ll at least have a basic idea of what that topic is, how it works, and what it is used for."
+                          </h4>
+                          <div class="card-footer">
+                            <time class="card-footer-item" datetime="2019-04-24">1:26 PM · Apr 24, 2019</time>
+                            <div class="card-footer-item">
+                              <a href="https://twitter.com/bdov_/status/1121148490715807744"
+                                class="card-header-icon"
+                                aria-label="Link to tweet"
+                                target="_blank">
+                                <span class="icon is-medium">
+                                  <i class="fab fa-twitter fa-2x" aria-hidden="true"></i>
+                                </span>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </article>  
+
+                      <!-- Right tile -->
+                      <article class="tile is-child card">
+                        <div class="card-content">
+                          <h4 class="content">
+                            "Thank you <a href="https://twitter.com/holbertonschool" target="_blank">@holbertonschool</a> for keeping me believing in the future of education. Three months in and I’ve learned just so much. You know you’re in the right place when you feel it in your heart. Looking forward to the next three months...after a well-earned turkey break. 😌🦃"
+                          </h4>
+                          <div class="card-footer">
+                            <time class="card-footer-item" datetime="2018-01-21">8:21 PM · Nov 21, 2018</time>
+                            <div class="card-footer-item">
+                              <a href="https://twitter.com/bdov_/status/1065460139853934592"
+                                class="card-header-icon"
+                                aria-label="Link to tweet"
+                                target="_blank">
+                                <span class="icon is-medium">
+                                  <i class="fab fa-twitter fa-2x" aria-hidden="true"></i>
+                                </span>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </article> 
+
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer up arrow -->
+      <div class="hero-foot has-text-centered">
+        <a href="#top" class="icon is-medium has-text-white" aria-label="To top of page" id="scroll-to-top">
+          <i class="fas fa-angle-up fa-2x" aria-hidden="true"></i>
+        </a>
+      </div>
+
+    </section>
+
+  </body>
+</html>

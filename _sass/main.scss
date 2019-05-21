@@ -1,0 +1,104 @@
+@charset "utf-8";
+@import "../node_modules/bulma/sass/utilities/initial-variables";
+
+/* Redfine colors */
+$blue: #1f5673;
+$brown: #664c43;
+$yellow: #f4d06f;
+$black: #1a1f16;
+
+/* Import Public Sans font */
+@font-face { font-family: "Public Sans"; src: url('../fonts/PublicSans-Medium.otf'); }
+$family-sans-serif: "Public Sans", sans-serif;
+
+/* Set colors */
+$primary: $blue;
+$warning: $brown;
+$info: $yellow;
+$success: $black;
+
+/* Set font */
+$family-primary: $family-sans-serif;
+
+/* Set responsive breakpoints */
+$tablet: 680px;
+$desktop: 1200px;
+
+@import "../node_modules/bulma/bulma";
+
+/* bdov.dev slide-in positioning */
+.hero-body > .container.site-title {
+    min-height: 115px;
+}
+.site-title > div {
+    padding: .75rem;
+}
+.site-title .full-stack,
+.site-title .bdov {
+    margin-bottom: 0;
+}
+.site-title .web-developer {
+    margin-left: -83px;
+    padding-right: 20px;
+}
+.site-title .dev {
+    margin-left: -15px;
+}
+.entry-slide {
+    display: none;
+    white-space: nowrap;
+}
+
+/* Initial arrow bounce */
+#scroll-to-work > i {
+    animation-name: bounce;
+    animation-duration: 1.5s;
+    animation-delay: 5.7s;
+}
+@-webkit-keyframes bounce {
+   0%, 20%, 50%, 80%, 100% {transform: translateY(0);} 
+   40% {transform: translateY(-25px);} 
+   60% {transform: translateY(-10px);} 
+} 
+@keyframes bounce {
+   0%, 20%, 50%, 80%, 100% {transform: translateY(0);} 
+   40% {transform: translateY(-25px);} 
+   60% {transform: translateY(-10px);} 
+} 
+
+/* Icon slider column settings */
+.slider {
+    min-height: 95px;
+}
+.reveal {
+    display: none;
+    flex-basis: unset;
+    padding: 0 20px 0 0;
+}
+
+/* Hover grow animation */
+.hvr-grow {
+  backface-visibility: hidden;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  display: inline-block;
+  -moz-osx-font-smoothing: grayscale;
+  opacity: .8;
+  transform: translateZ(0);
+  transition-duration: 0.3s;
+  transition-property: transform;
+  vertical-align: middle;
+}
+.hvr-grow:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/* Scroll progress bar */
+.scroll {
+  background: linear-gradient(to right, #8d5a97 var(--scroll), transparent 0);
+  background-repeat: no-repeat;
+  height: 4px;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
