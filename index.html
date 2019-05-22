@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>bdov.dev</title>
 
+    <!-- Favicon PNG, for Chrome -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <!-- Favicon SVG or iOS -->
+    <link rel="mask-icon" href="images/favicon.svg" color="white">
+    <!-- Favicon SVG -->
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
     <!-- Font Awesome-->
     <link rel="stylesheet"
           href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
@@ -26,16 +32,16 @@
     <section class="hero is-primary is-fullheight">
       <div class="hero-head"></div>
       <div class="hero-body">
-        <div class="container is-inline-flex-tablet site-title">
+        <div class="container is-flex-tablet site-title hidden-title">
           <div class="columns is-mobile">
-            <h1 class="title is-1 has-text-grey entry-slide full-stack">Full-Stack</h1>
-            <h1 class="title is-2 has-text-grey entry-slide web-developer">
+            <div class="title is-3 has-text-grey entry-slide full-stack">Full-Stack</div>
+            <div class="title is-4 has-text-grey entry-slide web-developer">
               <br>Web Developer
-            </h1>
+            </div>
           </div>
           <div class="columns is-mobile">
-            <h1 class="title is-1 has-text-white bdov">bdov</h1>
-            <h1 class="title is-2 has-text-white dev"><br>.dev</h1>
+            <h2 class="title is-2 has-text-white bdov">bdov</h2>
+            <h3 class="title is-3 has-text-white dev"><br>.dev</h3>
           </div>
         </div>
       </div>
@@ -61,24 +67,24 @@
                   <a href="https://github.com/bdbaraban"
                      class="icon is-large has-text-white hvr-grow"
                      target="_blank">
-                    <i class="fab fa-github fa-3x"></i>
+                    <i class="fab fa-github fa-2x"></i>
                   </a>
                 </div>
                 <div class="column is-marginless reveal">
                   <a href="https://www.linkedin.com/in/bdbaraban/"
                      class="icon is-large has-text-white hvr-grow"
                      target="_blank">
-                    <i class="fab fa-linkedin fa-3x"></i>
+                    <i class="fab fa-linkedin fa-2x"></i>
                   </a>
                 </div>
                 <div class="column is-marginless reveal">
                   <a href="mailto:375@holbertonschool.com"
                      class="icon is-large has-text-white hvr-grow"
                      target="_top">
-                     <i class="fas fa-envelope fa-3x"></i>
+                     <i class="fas fa-envelope fa-2x"></i>
                   </a>
                 </div>
-                <h2 class="title is-2 has-text-white">Work</h2>
+                <h3 class="title is-3 has-text-white underline">Work</h3>
               </div>
             </div>
 
@@ -104,16 +110,15 @@
                           </a>
                         </header>
                         <div class="card-content">
-                          <div class="content">
-                            A clone of AirBnB, including both a complete front-end/back-end website as well as a RESTful API. Pair programmed over four versions and manually deployed with Flask and Gnuicorn over Nginx.
+                          <div class="content is-small">
+                            RESTful API and website based on AirBnB. Back-end built in Python and MySQL, static front-end designed using HTML5 and CSS3. Pair programmed over four versions and manually deployed with Flask and Gnuicorn over Nginx.
                           </div>
                         </div>
                         <footer class="card-footer">
-                          <div class="card-footer-item">Python/Flask/SQLAlchemy</div>
-                          <div class="card-footer-item">MySQL</div>
-                          <div class="card-footer-item">HTML5/CSS3</div>
-                          <div class="card-footer-item">JS/jQuery</div>
-                          <div class="card-footer-item">Nginx/Gnuicorn</div>
+                          <div class="card-footer-item">Flask</div>
+                          <div class="card-footer-item">SQLAlchemy</div>
+                          <div class="card-footer-item">Jinja2</div>
+                          <div class="card-footer-item">jQuery</div>
                         </footer>
                       </article>
 
@@ -130,15 +135,14 @@
                           </a>
                         </header>
                         <div class="card-content">
-                          <div class="content">
-                            MLB Twitter lists website built using a Flask back-end and an HTML Bootstrap static front-end. Dynamically updates lists and league standings using the Twitter API and <a href="https://erikberg.com/api" target="_blank">Erik Berg's xmlstats</a> API, respectively.
+                          <div class="content is-small">
+                            MLB Twitter lists website built using a Python back-end and designed with Bootstrap 4. Dynamically updates lists and league standings using the Twitter API and <a href="https://erikberg.com/api" target="_blank">Erik Berg's xmlstats</a> API, respectively.
                           </div>
                         </div>
                         <footer class="card-footer">
-                          <div class="card-footer-item">Python/Flask</div>
-                          <div class="card-footer-item">HTML5/CSS3</div>
+                          <div class="card-footer-item">Flask</div>
                           <div class="card-footer-item">Bootstrap 4</div>
-                          <div class="card-footer-item">JS/jQuery</div>
+                          <div class="card-footer-item">jQuery</div>
                         </footer>
                       </article>
 
@@ -160,12 +164,13 @@
                           </a>
                         </header>
                         <div class="card-content">
-                          <div class="content">
+                          <div class="content is-small">
                             A minimalist 20-20-20 eye care timer built in React Native Expo. Alerts 20-second breaks at 20-minute intervals. My first project working on mobile, and with React.
                           </div>
                         </div>
                         <footer class="card-footer">
-                          <div class="card-footer-item">React Native/Expo</div>
+                          <div class="card-footer-item">React Native</div>
+                          <div class="card-footer-item">Expo</div>
                           <div class="card-footer-item">JavaScript</div>
                         </footer>
                       </article>
@@ -183,13 +188,14 @@
                           </a>
                         </header>
                         <div class="card-content">
-                          <div class="content">
-                            A simple UNIX command interpreter written in the C programming language, pair programmed over the course of one week.
+                          <div class="content is-small">
+                            A simple UNIX command interpreter written in the C programming language. Implements PATH handling, chained commands, and history. Pair programmed over the course of one week.
                           </div>
                         </div>
                         <footer class="card-footer">
                           <div class="card-footer-item">C</div>
-                          <div class="card-footer-item">Linux/Unix</div>
+                          <div class="card-footer-item">Linux</div>
+                          <div class="card-footer-item">Unix</div>
                         </footer>
                       </article>
 
@@ -228,10 +234,10 @@
                   <a href="https://medium.com/@bdov_"
                      class="icon is-large has-text-white hvr-grow"
                      target="_blank">
-                    <i class="fab fa-medium fa-3x"></i>
+                    <i class="fab fa-medium fa-2x"></i>
                   </a>
                 </div>
-                <h2 class="title is-2 has-text-white">Blog</h2>
+                <h3 class="title is-3 has-text-white underline">Blog</h3>
               </div>
             </div>
 
@@ -247,16 +253,17 @@
                       <!-- Top left tile -->
                       <article class="tile is-child card">
                         <div class="card-content">
-                          <h4 class="title is-4">
+                          <h6 class="title is-6 has-text-link">
                             <a href="https://medium.com/@bdov_/my-major-is-american-studies-9cb043853a6d" target="_blank">
                               My Major is American Studies.
                             </a>
-                          </h4>
-                          <div class="content">
+                          </h6>
+                          <div class="content is-small">
                             I know what you’re thinking: What are you going to do with that?
                           </div>
                           <div class="card-footer">
-                            <time class="card-footer-item" datetime="2018-01-19">January 19, 2018 - 4 min read</time>
+                            <time class="card-footer-item" datetime="2018-01-19">January 19, 2018</time>
+                            <div class="card-footer-item">4 min read</div>
                           </div>
                         </div>
                       </article> 
@@ -264,16 +271,19 @@
                       <!-- Bottom left tile -->
                       <article class="tile is-child card">
                         <div class="card-content">
-                          <h4 class="title is-4">
+                          <h6 class="title is-6 has-text-link">
                             <a href="https://medium.com/@bdov_/what-happens-when-you-type-fill-in-the-blank-website-into-a-browser-and-hit-enter-739702df3999" target="_blank">
                               Answering the Classic Web Infrastructure Question: What Happens When You Type [Fill-in-the-Blank-Website] Into a Browser and Hit Enter?
                             </a>
-                          </h4>
-                          <div class="content">
+                          </h6>
+                          <div class="content is-small">
                             The question is a classic of web infrastructure expertise - what happens when you type [insert generic website here] and hit Enter?
                           </div>
                           <div class="card-footer">
-                            <time class="card-footer-item" datetime="2019-04-14">April 14, 2019 - 19 min read</time>
+                            <time class="card-footer-item" datetime="2019-04-14">April 14, 2019</time>
+                            <div class="card-footer-item">
+                              19 min read
+                            </div>
                           </div>
                         </div>
                       </article> 
@@ -286,16 +296,19 @@
                       <!-- Top right tile -->
                       <article class="tile is-child card">
                         <div class="card-content">
-                          <h4 class="title is-4">
+                          <h6 class="title is-6 has-text-link">
                             <a href="https://medium.com/@bdov_/https-medium-com-bdov-python-objects-part-iii-string-interning-625d3c7319de" target="_blank">
                               Python Objects Part III: String Interning
                             </a>
-                          </h4>
-                          <div class="content">
+                          </h6>
+                          <div class="content is-small">
                             A full understanding of Python object instantiation requires an examination of one last relevant implementation - string interning.
                           </div>
                           <div class="card-footer">
-                            <time class="card-footer-item" datetime="2019-01-15">January 15, 2019 - 10 min read</time>
+                            <time class="card-footer-item" datetime="2019-01-15">January 15, 2019</time>
+                            <div class="card-footer-item">
+                              10 min read
+                            </div>
                           </div>
                         </div>
                       </article>
@@ -303,16 +316,19 @@
                       <!-- Bottom right tile -->
                       <article class="tile is-child card">
                         <div class="card-content">
-                          <h4 class="title is-4">
+                          <h6 class="title is-6 has-text-link">
                             <a href="https://medium.com/@bdov_/javascript-typescript-execution-vs-lexical-vs-variable-environment-37ff3f264831" target="_blank">
                               JavaScript/TypeScript Internals: Execution vs. Lexical vs. Variable Environment
                             </a>
-                          </h4>
-                          <div class="content">
+                          </h6>
+                          <div class="content is-small">
                             In this, my first blog post focusing on the language, I'd like to dive into an important fundamental concept driving how JavaScript works - execution environment. 
                           </div>
                           <div class="card-footer">
-                            <time class="card-footer-item" datetime="2019-05-06">May 6, 2019 - 7 min read</time>
+                            <time class="card-footer-item" datetime="2019-05-06">May 6, 2019</time>
+                            <div class="card-footer-item">
+                              7 min read
+                            </div>
                           </div>
                         </div>
                       </article> 
@@ -352,24 +368,24 @@
                   <a href="https://twitter.com/bdov_"
                      class="icon is-large has-text-white hvr-grow"
                      target="_blank">
-                    <i class="fab fa-twitter fa-3x"></i>
+                    <i class="fab fa-twitter fa-2x"></i>
                   </a>
                 </div>
                 <div class="column is-marginless reveal">
                   <a href="https://www.facebook.com/brennan.baraban"
                      class="icon is-large has-text-white hvr-grow"
                      target="_blank">
-                    <i class="fab fa-facebook fa-3x"></i>
+                    <i class="fab fa-facebook fa-2x"></i>
                   </a>
                 </div>
                 <div class="column is-marginless reveal">
                   <a href="https://www.instagram.com/bdov_/"
                      class="icon is-large has-text-white hvr-grow"
                      target="_blank">
-                    <i class="fab fa-instagram fa-3x"></i>
+                    <i class="fab fa-instagram fa-2x"></i>
                   </a>
                 </div>
-                <h2 class="title is-2 has-text-white">Social</h2>
+                <h3 class="title is-3 has-text-white underline">Social</h3>
               </div>
             </div>
 
@@ -384,19 +400,14 @@
 
                       <!-- Top left tile -->
                       <article class="tile is-child card">
-                        <div class="card-image">
-                          <figure class="image is-2by1">
-                            <img src="https://pbs.twimg.com/media/DxfC1chVsAcf2ws?format=jpg&name=medium" alt="This school means a lot to me tweet picture">
-                          </figure>
-                        </div>
                         <div class="card-content">
-                          <h4 class="content">
-                            "This school means a lot to me right now."
+                          <h4 class="content is-small">
+                            "Redesigned, introducing <a href="https://bdov.dev" aria-label="Link to bdov.dev">bdov.dev</a> 2.0. Shoutout to <a href="https://twitter.com/jgthms" aria-label="Link to Jeremy Thomas Twitter">@jgthms</a> for Bulma, my new favorite CSS framework, and <a href="https://twitter.com/zeithq" aria-label="Link to Zeit Twitter">@zeithq</a> for making deployment so, so simple.<br><br>...and jQuery, of course. :)"
                           </h4>
                           <div class="card-footer">
-                            <time class="card-footer-item" datetime="2019-01-21">7:26 PM · Jan 21, 2019</time>
+                            <time class="card-footer-item" datetime="2019-05-21">May 21, 2019</time>
                             <div class="card-footer-item">
-                              <a href="https://twitter.com/bdov_/status/1087552063494512640"
+                              <a href="https://twitter.com/bdov_/status/1098360865395363841"
                                 class="card-header-icon"
                                 aria-label="Link to tweet"
                                 target="_blank">
@@ -412,13 +423,13 @@
                       <!-- Bottom left tile -->
                       <article class="tile is-child card">
                         <div class="card-content">
-                          <h4 class="content">
-                            "Love how Cohort 8 is fully embracing the Emacs-Vim debate. Go ahead and battle it out for a while, but eventually you’ll realize that Vim has had this war won and done for a while now."
+                          <h4 class="content is-small">
+                            "My lifelong tech goal is to reach a point where you can broach a conversation with me on any software language, tool, or concept, and that I’ll at least have a basic idea of what that topic is, how it works, and what it is used for."
                           </h4>
                           <div class="card-footer">
-                            <time class="card-footer-item" datetime="2019-02-20">3:16 PM · Feb 20, 2019</time>
+                            <time class="card-footer-item" datetime="2019-04-24">Apr. 24, 2019</time>
                             <div class="card-footer-item">
-                              <a href="https://twitter.com/bdov_/status/1098360865395363841"
+                              <a href="https://twitter.com/bdov_/status/1121148490715807744"
                                 class="card-header-icon"
                                 aria-label="Link to tweet"
                                 target="_blank">
@@ -436,38 +447,16 @@
                     <!-- Right tiles -->
                     <div class="tile is-parent is-vertical">
 
-                      <!-- Left tile -->
+                      <!-- Top right tile -->
                       <article class="tile is-child card">
                         <div class="card-content">
-                          <h4 class="content">
-                            "My lifelong tech goal is to reach a point where you can broach a conversation with me on any software language, tool, or concept, and that I’ll at least have a basic idea of what that topic is, how it works, and what it is used for."
+                          <h4 class="content is-small">
+                            "Always learning."
                           </h4>
                           <div class="card-footer">
-                            <time class="card-footer-item" datetime="2019-04-24">1:26 PM · Apr 24, 2019</time>
+                            <time class="card-footer-item" datetime="2019-01-18">Jan. 18, 2019</time>
                             <div class="card-footer-item">
-                              <a href="https://twitter.com/bdov_/status/1121148490715807744"
-                                class="card-header-icon"
-                                aria-label="Link to tweet"
-                                target="_blank">
-                                <span class="icon is-medium">
-                                  <i class="fab fa-twitter fa-2x" aria-hidden="true"></i>
-                                </span>
-                              </a>
-                            </div>
-                          </div>
-                        </div>
-                      </article>  
-
-                      <!-- Right tile -->
-                      <article class="tile is-child card">
-                        <div class="card-content">
-                          <h4 class="content">
-                            "Thank you <a href="https://twitter.com/holbertonschool" target="_blank">@holbertonschool</a> for keeping me believing in the future of education. Three months in and I’ve learned just so much. You know you’re in the right place when you feel it in your heart. Looking forward to the next three months...after a well-earned turkey break. 😌🦃"
-                          </h4>
-                          <div class="card-footer">
-                            <time class="card-footer-item" datetime="2018-01-21">8:21 PM · Nov 21, 2018</time>
-                            <div class="card-footer-item">
-                              <a href="https://twitter.com/bdov_/status/1065460139853934592"
+                              <a href="https://twitter.com/bdov_/status/1086484187291344896"
                                 class="card-header-icon"
                                 aria-label="Link to tweet"
                                 target="_blank">
@@ -479,6 +468,33 @@
                           </div>
                         </div>
                       </article> 
+
+                      <!-- Bottom right tile -->
+                      <article class="tile is-child card">
+                        <div class="card-image">
+                          <figure class="image is-2by1">
+                            <img src="https://pbs.twimg.com/media/DxfC1chVsAcf2ws?format=jpg&name=medium" alt="This school means a lot to me tweet picture">
+                          </figure>
+                        </div>
+                        <div class="card-content">
+                          <h4 class="content is-small">
+                            "This school means a lot to me right now."
+                          </h4>
+                          <div class="card-footer">
+                            <time class="card-footer-item" datetime="2019-01-21">Jan. 21, 2019</time>
+                            <div class="card-footer-item">
+                              <a href="https://twitter.com/bdov_/status/1087552063494512640"
+                                class="card-header-icon"
+                                aria-label="Link to tweet"
+                                target="_blank">
+                                <span class="icon is-medium">
+                                  <i class="fab fa-twitter fa-2x" aria-hidden="true"></i>
+                                </span>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </article>
 
                     </div>
 
