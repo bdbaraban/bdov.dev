@@ -26,9 +26,17 @@ $desktop: 1200px;
 
 @import "../node_modules/bulma/bulma";
 
+/* Customize text sizing */
+.card-footer-item {
+    font-size: .9rem;
+}
+.title.is-3 {
+    line-height: .9375;
+}
+
 /* bdov.dev slide-in positioning */
 .hero-body > .container.site-title {
-    min-height: 115px;
+    min-height: 80px;
 }
 .site-title > div {
     padding: .75rem;
@@ -38,11 +46,14 @@ $desktop: 1200px;
     margin-bottom: 0;
 }
 .site-title .web-developer {
-    margin-left: -83px;
+    margin-left: -50px;
     padding-right: 20px;
 }
+.hidden-title {
+    margin-top: 1px;
+}
 .site-title .dev {
-    margin-left: -15px;
+    margin-left: -14px;
 }
 .entry-slide {
     display: none;
@@ -68,12 +79,12 @@ $desktop: 1200px;
 
 /* Icon slider column settings */
 .slider {
-    min-height: 95px;
+    min-height: 96px;
 }
 .reveal {
     display: none;
     flex-basis: unset;
-    padding: 0 20px 0 0;
+    padding: 0 10px 0 0;
 }
 
 /* Hover grow animation */
@@ -91,6 +102,28 @@ $desktop: 1200px;
 .hvr-grow:hover {
     opacity: 1;
     transform: scale(1.1);
+}
+
+/* Hover underline animation */
+.underline {
+  position: relative;
+  height: 40px;
+}
+.underline::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #8d5a97;
+  transform-origin: bottom right;
+  transform: scaleX(0);
+  transition: transform 0.5s ease;
+}
+.underline:hover::before {
+  transform-origin: bottom left;
+  transform: scaleX(1);
 }
 
 /* Scroll progress bar */
