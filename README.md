@@ -15,4 +15,4 @@ Zeit's [Now](https://zeit.co/now).
 ## License :lock:
 
 This project is licensed under the MIT License - see the
-[LICENSE.md](./LICENSE.md) file for details
+[LICENSE](./LICENSE) file for details
