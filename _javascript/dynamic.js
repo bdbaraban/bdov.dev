@@ -49,11 +49,11 @@ $('document').ready(() => {
   /* Initial title slide-in animation */
   async function first() {
     setTimeout(() => {
-      $('h1.entry-slide').show(1250);
+      $('div.entry-slide').show(1250);
     }, 1500);
   }
   first().then(setTimeout(() => {
-    $('h1.entry-slide').hide(1250);
+    $('div.entry-slide').hide(1250);
   }, 4500));
 
   /* Footer arrow scroll functionality */
@@ -87,9 +87,7 @@ $('document').ready(() => {
     revealOnScroll('#social-slider');
   });
 
-  /* Hover icon column slide-out */
-  $('div.slider').hover(
-    function slideOut() { reveal(this); },
-    function slideIn() { hide(this); },
-  );
+  $('h3.underline').click(function slideInandOut() {
+    $(this).parent().find('div.reveal').toggle(1250, 'swing');
+  });
 });
