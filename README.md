@@ -4,7 +4,7 @@
 </p>
 
 <p align="center">
-    <img src="assets/logo.png" alt="bdov.dev logo" style="width: 250px">
+    <img src="images/logo_readme.png" alt="bdov.dev logo" style="width: 250px">
 </p>
 
 ## Description :speech_balloon:
