@@ -7,20 +7,18 @@
     <title>bdov.dev</title>
 
     <!-- Favicon PNG, for Chrome -->
-    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="icon" type="image/png" href="images/logo.png">
     <!-- Favicon SVG or iOS -->
-    <link rel="mask-icon" href="images/favicon.svg" color="white">
+    <link rel="mask-icon" href="images/logo.svg" color="white">
     <!-- Favicon SVG -->
-    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
-    <!-- Font Awesome-->
-    <link rel="stylesheet"
-          href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-          integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-          crossorigin="anonymous">
+    <link rel="icon" type="image/svg+xml" href="images/logo.svg">
     <!-- Bulma CSS -->
     <link rel="stylesheet" href="css/main.css">
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/051d5c98a7.js"></script>
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <!-- Personal JS -->
     <script src="_javascript/dynamic.js"></script>
   </head>
 
@@ -28,25 +26,125 @@
     <!-- Progress bar -->
     <div class="scroll"></div>
 
+    <!-- Navbar -->
+    <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+      <div class="container">
+
+        <!-- Top left logo -->
+        <div class="navbar-brand is-fixed-top">
+          <object class="navbar-item image"
+                  data="images/logo.svg"
+                  type="image/svg+xml"></object>
+          <a role="button"
+             class="navbar-burger burger"
+             aria-label="menu"
+             aria-expanded="false"
+             data-target="navMenu"
+           >
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+
+        <!-- Menu options -->
+        <div id="navMenu" class="navbar-menu has-background-primary">
+          <div class="navbar-end">
+            <a class="navbar-item is-spaced">
+              <span>Resume</span>
+              <span class="icon">
+                <i class="fas fa-file"></i>
+              </span>
+            </a>
+            <a class="navbar-item is-spaced"
+               href="mailto:375@holbertonschool.com"
+               target="_top"
+            >
+              <span>Contact</span>
+              <span class="icon">
+                <i class="fas fa-envelope"></i>
+              </span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </nav>
+
     <!-- bdov.dev -->
     <section class="hero is-primary is-fullheight">
       <div class="hero-head"></div>
       <div class="hero-body">
-        <div class="container is-flex-tablet site-title hidden-title">
-          <div class="columns is-mobile">
-            <div class="title is-3 has-text-grey entry-slide full-stack">Full-Stack</div>
-            <div class="title is-4 has-text-grey entry-slide web-developer">
-              <br>Web Developer
+        <div class="container">
+          <div class="columns is-desktop is-vcentered">
+
+            <!-- Title -->
+            <div class="column is-full-touch is-one-third-desktop is-centered">
+              <h3 class="title is-3 has-text-centered has-text-white">Brennan D Baraban</h3>
+              <h5 class="title is-5 has-text-centered has-text-grey">Full-Stack Web Developer</h5>
             </div>
-          </div>
-          <div class="columns is-mobile">
-            <h2 class="title is-2 has-text-white bdov">bdov</h2>
-            <h3 class="title is-3 has-text-white dev"><br>.dev</h3>
+
+            <!-- Web Developer skills -->
+            <div class="column is-full-touch is-two-thirds-desktop">
+              <h5 class="title is-5 has-text-centered has-text-white">My skills/interests:</h5>
+              <div class="tags are-medium is-centered">
+                <div class="column is-four-fifths has-text-centered">
+                  <span class="tag is-rounded">
+                    Python
+                    <i class="fas fa-star tag-icon"></i>
+                  </span>
+                  <span class="tag is-rounded">
+                    Node.js
+                    <i class="fas fa-star tag-icon"></i>
+                  </span>
+                  <span class="tag is-rounded">
+                    React
+                    <i class="fas fa-star tag-icon"></i>
+                  </span>
+                  <span class="tag is-rounded">C</span>
+                  <span class="tag is-rounded">Flask</span>
+                  <span class="tag is-rounded">Jinja2</span>
+                  <span class="tag is-rounded">Rust</span>
+                  <span class="tag is-rounded">Linux</span>
+                  <span class="tag is-rounded">Windows</span>
+                  <span class="tag is-rounded">MacOS</span>
+                  <span class="tag is-rounded">Vagrant</span>
+                  <span class="tag is-rounded">Nginx</span>
+                  <span class="tag is-rounded">Bash</span>
+                  <span class="tag is-rounded">Puppet</span>
+                  <span class="tag is-rounded">Fabric</span>
+                  <span class="tag is-rounded">Docker</span>
+                  <span class="tag is-rounded">
+                    JavaScript
+                    <i class="fas fa-star tag-icon"></i>
+                  </span>
+                  <span class="tag is-rounded">
+                    TypeScript
+                    <i class="fas fa-star tag-icon"></i>
+                  </span>
+                  <span class="tag is-rounded">
+                    React Native
+                    <i class="fas fa-star tag-icon"></i>
+                  </span>
+                  <span class="tag is-rounded">HTML5</span>
+                  <span class="tag is-rounded">CSS3</span>
+                  <span class="tag is-rounded">jQuery</span>
+                  <span class="tag is-rounded">Bootstrap</span>
+                  <span class="tag is-rounded">
+                    Bulma
+                    <i class="fas fa-star tag-icon"></i>
+                  </span>
+                  <span class="tag is-rounded">MySQL</span>
+                  <span class="tag is-rounded">SQLAlchemy</span>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
       <div class="hero-foot has-text-centered">
-        <a href="#work" class="icon is-medium has-text-white" aria-label="To work section" id="scroll-to-work">
+        <a href="#work" class="icon is-medium has-text-white" aria-label="scroll-to-work-section" id="scroll-to-work">
           <i class="fas fa-angle-down fa-2x" aria-hidden="true"></i>
         </a>
       </div>
@@ -60,38 +158,31 @@
         <div class="container">
           <div class="columns is-desktop is-vcentered">
 
-            <!-- Icon slider -->
-            <div class="column is-full-touch is-one-third-desktop">
-              <div class="column is-inline-flex slider" id="work-slider">
-                <div class="column is-marginless reveal">
+            <!-- Left title and icons -->
+            <div class="column is-full-touch is-one-third-desktop is-paddingless has-text-centered">
+              <h3 class="title is-3 is-marginless has-text-centered has-text-white">Work</h3>
+              <div class="column is-inline-flex">
+                <div class="column">
                   <a href="https://github.com/bdbaraban"
                      class="icon is-large has-text-white hvr-grow"
                      target="_blank">
                     <i class="fab fa-github fa-2x"></i>
                   </a>
                 </div>
-                <div class="column is-marginless reveal">
+                <div class="column">
                   <a href="https://www.linkedin.com/in/bdbaraban/"
                      class="icon is-large has-text-white hvr-grow"
                      target="_blank">
                     <i class="fab fa-linkedin fa-2x"></i>
                   </a>
                 </div>
-                <div class="column is-marginless reveal">
-                  <a href="mailto:375@holbertonschool.com"
-                     class="icon is-large has-text-white hvr-grow"
-                     target="_top">
-                     <i class="fas fa-envelope fa-2x"></i>
-                  </a>
-                </div>
-                <h3 class="title is-3 has-text-white underline">Work</h3>
               </div>
             </div>
 
             <!-- Tiles -->
-            <div class="column is-full-touch is-two-thirds-desktop">
+            <div class="column is-full-width-touch is-two-thirds-desktop">
               <div class="columns is-centered">
-                <div class="column">
+                <div class="column is-flex">
                   <div class="tile is-ancestor">
 
                     <!-- Left tiles -->
@@ -100,8 +191,15 @@
                       <!-- Top left tile -->
                       <article class="tile is-child card">
                         <header class="card-header">
-                          <h2 class="card-header-title">HolbertonBnB 🏠</h2>
-                          <a href="https://github.com/bdbaraban/AirBnB_clone_v4"
+                          <h2 class="card-header-title">IdeaDog 🐕</h2>
+                          <a href="https://ideadog.site"
+                            class="card-header-icon has-text-warning"
+                            target="_blank">
+                            <span class="icon is-medium">
+                              <i class="fas fa-globe fa-2x" aria-hidden="true"></i>
+                            </span>
+                          </a>
+                          <a href="https://github.com/bdbaraban/ideadog"
                             class="card-header-icon has-text-warning"
                             target="_blank">
                             <span class="icon is-medium">
@@ -111,14 +209,13 @@
                         </header>
                         <div class="card-content">
                           <div class="content is-small">
-                            RESTful API and website based on AirBnB. Back-end built in Python and MySQL, static front-end designed using HTML5 and CSS3. Pair programmed over four versions and manually deployed with Flask and Gnuicorn over Nginx.
+                            A [statically-typed] social ideas platform. Front-end user interface built using React, with TypeScript (built by yours truly), back-end API and server built in Rust, querying from an ArangoDB database (built by partner). Asynchronous data fetching, rapid NoSQL relational querying, magic link authorization - a truly modern web app.
                           </div>
                         </div>
                         <footer class="card-footer">
-                          <div class="card-footer-item">Flask</div>
-                          <div class="card-footer-item">SQLAlchemy</div>
-                          <div class="card-footer-item">Jinja2</div>
-                          <div class="card-footer-item">jQuery</div>
+                          <div class="card-footer-item">React</div>
+                          <div class="card-footer-item">TypeScript</div>
+                          <div class="card-footer-item">Docker</div>
                         </footer>
                       </article>
 
@@ -136,7 +233,7 @@
                         </header>
                         <div class="card-content">
                           <div class="content is-small">
-                            MLB Twitter lists website built using a Python back-end and designed with Bootstrap 4. Dynamically updates lists and league standings using the Twitter API and <a href="https://erikberg.com/api" target="_blank">Erik Berg's xmlstats</a> API, respectively.
+                            MLB Twitter lists website built using a Python Flask back-end and designed with Bootstrap 4. Dynamically updates lists and league standings using the Twitter API and <a href="https://erikberg.com/api" target="_blank">Erik Berg's xmlstats</a> API, respectively.
                           </div>
                         </div>
                         <footer class="card-footer">
@@ -178,8 +275,8 @@
                       <!-- Bottom right tile -->
                       <article class="tile is-child card">
                         <header class="card-header">
-                          <h2 class="card-header-title">Shellby 🐚</h2>
-                          <a href="https://github.com/bdbaraban/simple_shell"
+                          <h2 class="card-header-title">HolbertonBnB 🏠</h2>
+                          <a href="https://github.com/bdbaraban/AirBnB_clone_v4"
                             class="card-header-icon has-text-warning"
                             target="_blank">
                             <span class="icon is-medium">
@@ -189,16 +286,16 @@
                         </header>
                         <div class="card-content">
                           <div class="content is-small">
-                            A simple UNIX command interpreter written in the C programming language. Implements PATH handling, chained commands, and history. Pair programmed over the course of one week.
+                            RESTful API and website based on AirBnB. Back-end Flask app built in Python and MySQL, static front-end designed using HTML5, CSS3 and jQuery. Pair programmed over four versions and manually deployed with Flask and Gnuicorn over Nginx.
                           </div>
                         </div>
                         <footer class="card-footer">
-                          <div class="card-footer-item">C</div>
-                          <div class="card-footer-item">Linux</div>
-                          <div class="card-footer-item">Unix</div>
+                          <div class="card-footer-item">Flask</div>
+                          <div class="card-footer-item">SQLAlchemy</div>
+                          <div class="card-footer-item">Jinja2</div>
+                          <div class="card-footer-item">jQuery</div>
                         </footer>
                       </article>
-
                     </div>
 
                   </div>
@@ -227,24 +324,25 @@
         <div class="container">
           <div class="columns is-desktop is-vcentered">
 
-            <!-- Icon slider -->
-            <div class="column is-full-touch is-one-third desktop">
-              <div class="column is-inline-flex slider" id="blog-slider">
-                <div class="column is-marginless reveal">
+            <!-- Left title and icon -->
+            <div class="column is-full-touch is-one-third-desktop is-paddingless has-text-centered">
+              <h3 class="title is-3 is-marginless has-text-centered has-text-white">Blog</h3>
+              <div class="column is-inline-flex">
+                <div class="column">
                   <a href="https://medium.com/@bdov_"
                      class="icon is-large has-text-white hvr-grow"
                      target="_blank">
                     <i class="fab fa-medium fa-2x"></i>
                   </a>
                 </div>
-                <h3 class="title is-3 has-text-white underline">Blog</h3>
               </div>
             </div>
 
             <!-- Tiles -->
             <div class="column is-full-touch is-two-thirds-desktop">
               <div class="columns is-centered">
-                <div class="column">
+
+                <div class="column is-flex">
                   <div class="tile is-ancestor">
 
                     <!-- Left tiles -->
@@ -266,7 +364,7 @@
                             <div class="card-footer-item">4 min read</div>
                           </div>
                         </div>
-                      </article> 
+                      </article>
 
                       <!-- Bottom left tile -->
                       <article class="tile is-child card">
@@ -286,7 +384,7 @@
                             </div>
                           </div>
                         </div>
-                      </article> 
+                      </article>
 
                     </div>
 
@@ -322,7 +420,7 @@
                             </a>
                           </h6>
                           <div class="content is-small">
-                            In this, my first blog post focusing on the language, I'd like to dive into an important fundamental concept driving how JavaScript works - execution environment. 
+                            In this, my first blog post focusing on the language, I'd like to dive into an important fundamental concept driving how JavaScript works - execution environment.
                           </div>
                           <div class="card-footer">
                             <time class="card-footer-item" datetime="2019-05-06">May 6, 2019</time>
@@ -331,13 +429,13 @@
                             </div>
                           </div>
                         </div>
-                      </article> 
+                      </article>
 
                     </div>
 
                   </div>
                 </div>
-              </div> 
+              </div>
             </div>
 
           </div>
@@ -361,31 +459,31 @@
         <div class="container">
           <div class="columns is-desktop is-vcentered">
 
-            <!-- Icon slider -->
-            <div class="column is-full-touch is-one-third-desktop">
-              <div class="column is-inline-flex slider" id="social-slider">
-                <div class="column is-marginless reveal">
+            <!-- Left title and icons -->
+            <div class="column is-full-touch is-one-third-desktop is-paddingless has-text-centered">
+              <h3 class="title is-3 is-marginless has-text-centered has-text-white">Social</h3>
+              <div class="column is-inline-flex">
+                <div class="column">
                   <a href="https://twitter.com/bdov_"
                      class="icon is-large has-text-white hvr-grow"
                      target="_blank">
                     <i class="fab fa-twitter fa-2x"></i>
                   </a>
                 </div>
-                <div class="column is-marginless reveal">
+                <div class="column">
                   <a href="https://www.facebook.com/brennan.baraban"
                      class="icon is-large has-text-white hvr-grow"
                      target="_blank">
                     <i class="fab fa-facebook fa-2x"></i>
                   </a>
                 </div>
-                <div class="column is-marginless reveal">
+                <div class="column">
                   <a href="https://www.instagram.com/bdov_/"
                      class="icon is-large has-text-white hvr-grow"
                      target="_blank">
                     <i class="fab fa-instagram fa-2x"></i>
                   </a>
                 </div>
-                <h3 class="title is-3 has-text-white underline">Social</h3>
               </div>
             </div>
 
@@ -440,7 +538,7 @@
                             </div>
                           </div>
                         </div>
-                      </article>  
+                      </article>
 
                     </div>
 
@@ -451,12 +549,12 @@
                       <article class="tile is-child card">
                         <div class="card-content">
                           <h4 class="content is-small">
-                            "Always learning."
+                            "I really like React. <a aria-label="hashtag">#React</a> <a aria-label="hashtag">#JavaScript</a> <a aria-label="hashtag">#TypeScript</a>"
                           </h4>
                           <div class="card-footer">
-                            <time class="card-footer-item" datetime="2019-01-18">Jan. 18, 2019</time>
+                            <time class="card-footer-item" datetime="2019-06-06">June 6, 2019</time>
                             <div class="card-footer-item">
-                              <a href="https://twitter.com/bdov_/status/1086484187291344896"
+                              <a href="https://twitter.com/bdov_/status/1136737122495238144"
                                 class="card-header-icon"
                                 aria-label="Link to tweet"
                                 target="_blank">
@@ -467,7 +565,7 @@
                             </div>
                           </div>
                         </div>
-                      </article> 
+                      </article>
 
                       <!-- Bottom right tile -->
                       <article class="tile is-child card">
@@ -515,6 +613,5 @@
       </div>
 
     </section>
-
   </body>
 </html>
