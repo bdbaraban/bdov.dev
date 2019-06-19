@@ -15,10 +15,10 @@ The static content behind my personal portfolio website. Built from scratch usin
 
 I develop bdov.dev on [Node.js](https://nodejs.org) version 12.4.0 with [npm](https://www.npmjs.com/) version 6.9.0.
 
-Install packages: `npm install --only=dev`
-Run development mode: `npm start`
-Build production: `npm run css-deploy && npm run js-build`
-Deploy: `npm run deploy-production`
+* Install packages: `npm install --only=dev`
+* Run development mode: `npm start`
+* Build production: `npm run css-deploy && npm run js-build`
+* Deploy: `npm run deploy-production`
 
 ## Author :black_nib:
 
