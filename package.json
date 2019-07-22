@@ -26,6 +26,7 @@
     "postcss-cli": "^6.1.2"
   },
   "scripts": {
+    "build": "npm run css-deploy && npm run js-build",
     "css-build": "node-sass _sass/main.scss css/main.css",
     "css-deploy": "npm run css-build && npm run css-postcss",
     "css-postcss": "postcss --use autoprefixer --output css/main.css css/main.css",
