@@ -26,7 +26,7 @@
     "postcss-cli": "^6.1.2"
   },
   "scripts": {
-    "build": "npm run css-deploy && npm run js-build && npm run prepare",
+    "build": "npm run css-deploy && npm run js-build",
     "css-build": "node-sass src/_sass/main.scss src/css/main.css",
     "css-deploy": "npm run css-build && npm run css-postcss",
     "css-postcss": "postcss --use autoprefixer --output src/css/main.css src/css/main.css",
@@ -36,7 +36,6 @@
     "lint": "eslint --global $ src/_javascript/*",
     "js-build": "babel src/_javascript --out-dir src/lib",
     "js-watch": "npm run js-build -- --watch",
-    "prepare": "mkdir -p public && cp -r src/css/ public && cp -r src/fonts/ public && cp -r src/images/ public && cp -r src/lib/ public && cp src/index.html public",
     "start": "npm-run-all --parallel css-watch js-watch"
   }
 }
