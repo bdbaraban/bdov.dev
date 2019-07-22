@@ -26,16 +26,17 @@
     "postcss-cli": "^6.1.2"
   },
   "scripts": {
-    "build": "npm run css-deploy && npm run js-build",
-    "css-build": "node-sass _sass/main.scss css/main.css",
+    "build": "npm run css-deploy && npm run js-build && npm run prepare",
+    "css-build": "node-sass src/_sass/main.scss src/css/main.css",
     "css-deploy": "npm run css-build && npm run css-postcss",
-    "css-postcss": "postcss --use autoprefixer --output css/main.css css/main.css",
+    "css-postcss": "postcss --use autoprefixer --output src/css/main.css src/css/main.css",
     "css-watch": "npm run css-build -- --watch",
-    "deploy-staging": "npm run css-deploy && npm run js-build && now",
-    "deploy-production": "npm run css-deploy && npm run js-build && now --target production",
-    "lint": "eslint --global $ _javascript/*",
-    "js-build": "babel _javascript --out-dir lib",
+    "deploy-staging": "npm run build && now",
+    "deploy-production": "npm run build && now --target production",
+    "lint": "eslint --global $ src/_javascript/*",
+    "js-build": "babel src/_javascript --out-dir src/lib",
     "js-watch": "npm run js-build -- --watch",
+    "prepare": "mkdir -p public && cp -r src/css/ public && cp -r src/fonts/ public && cp -r src/images/ public && cp -r src/lib/ public && cp src/index.html public",
     "start": "npm-run-all --parallel css-watch js-watch"
   }
 }
