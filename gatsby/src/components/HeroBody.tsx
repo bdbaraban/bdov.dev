@@ -8,9 +8,7 @@ const HeroBody = ({
   ...props
 }: PropsWithChildren<HTMLAttributes<HTMLDivElement>>): ReactElement => (
   <div className={`hero-body ${props.className}`} {...props}>
-    <div className="container">
-      <div className="columns is-desktop is-vcentered">{children}</div>
-    </div>
+    <div className="level is-fullwidth">{children}</div>
   </div>
 );
 
