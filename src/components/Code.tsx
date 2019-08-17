@@ -47,15 +47,7 @@ const Code = (): ReactElement => {
           {', '}
           <br />
           {'  '}
-          and: <span className="string">&apos;Dogs&apos;</span>
-          {', '}
-          <br />
-          {'  '}
-          fan: <span className="string">&apos;New York Yankees&apos;</span>
-          {', '}
-          <br />
-          {'  '}
-          alwaysLearning: <span className="boolean">&apos;true&apos;</span>
+          alwaysLearning: <span className="boolean">true</span>
           <br />
           <span className="symbol">{'}'}</span>
           <span className="punctuation">{')'}</span>
