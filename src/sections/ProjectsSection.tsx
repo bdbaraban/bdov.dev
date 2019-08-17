@@ -48,7 +48,7 @@ const ProjectsSection = (): ReactElement => {
       github: 'https://github.com/bdbaraban/holbertonbnb',
       emoji: <Emoji label="house" symbol="🏠" />,
       description:
-        'RESTful API and website based on Airbnb. Back-end Flask app built in Python and MySQL, dynamic front-end designed using HTML5, CSS3 and jQuery. Pair programmed over four versions and manually deployed on an AWS EC2 instance with Flask and Gnuicorn over Nginx.',
+        'RESTful API and website based on Airbnb. Back-end Flask app built in Python and MySQL, HTML/CSS front-end made dynamic with jQuery. Pair programmed over four versions. Manually deployed on Gunicorn and Nginx.',
       tools: ['Flask', 'MySQL', 'HTML/CSS', 'jQuery']
     },
     {
