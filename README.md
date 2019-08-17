@@ -1,11 +1,6 @@
-<h1 align="center"><a href="https://bdov.dev" target="_blank" rel="noopener noreferrer">bdov.dev</a></h1>
-<p align="center">
-    My personal portfolio website.
-</p>
+# [bdov.dev](https://bdov.dev)
 
-<p align="center">
-  <img alt="Gatsby" src="src/assets/logo.svg" width="60" />
-</p>
+## My personal portfolio website.
 
 ### Description :speech_balloon:
 
