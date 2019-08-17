@@ -1,7 +1,15 @@
 import React, { ReactElement } from 'react';
+import styled from 'styled-components';
 import { BlogTileProps } from '../types';
 import { getDateString, getDateTime } from '../utils';
 import { Emoji } from '.';
+
+/**
+ * Custom styled list item
+ */
+const StyledLi = styled.li`
+  margin-left: 1.5rem;
+`;
 
 /**
  * Tile-card for blog articles
@@ -10,6 +18,7 @@ const BlogTile = ({
   title,
   link,
   description,
+  highlight,
   date,
   minutes,
   claps
@@ -26,6 +35,9 @@ const BlogTile = ({
           </a>
         </h6>
         <div className="content is-small">{description}</div>
+        {highlight && (
+          <StyledLi className="content is-small">{highlight}</StyledLi>
+        )}
         <div className="card-footer">
           <time
             className="card-footer-item has-text-centered"
