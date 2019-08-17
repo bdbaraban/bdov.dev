@@ -1,2 +1,26 @@
-node_modules
-package-lock.json
+# Logs
+logs
+*.log
+yarn-debug.log*
+yarn-error.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Dependency directories
+node_modules/
+
+# gatsby files
+.cache/
+public
+
+# Yarn
+yarn.lock
+yarn-error.log
+.pnp/
+.pnp.js
+# Yarn Integrity file
+.yarn-integrity

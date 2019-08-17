@@ -1,0 +1,107 @@
+@charset "utf-8";
+
+$char: #d8dee9;
+$comment: #b2b2b2;
+$keyword: #c5a5c5;
+$lineHighlight: #353b45;
+$primitive: #5a9bcf;
+$string: #8dc891;
+$variable: #d7deea;
+$boolean: #ff8b50;
+$punctuation: #88c6be;
+$tag: #fc929e;
+$function: #79b6f2;
+$className: #fac863;
+$method: #6699cc;
+$operator: #fc929e;
+
+pre {
+  border-radius: 4px;
+  color: #fff;
+}
+
+.code-highlight {
+  background-color: #063d5a;
+  border: 4px solid #8d5a97;
+  color: #fff;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, Courier New, monospace;
+  font-size: 1.2em;
+  min-height: 401.6px;
+  width: 528px;
+  max-width: 100%;
+  padding: 2em;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.attr-name {
+  color: $keyword;
+}
+
+.comment,
+.block-comment,
+.prolog,
+.doctype,
+.cdata {
+  color: $comment;
+}
+
+.property,
+.number,
+.function-name,
+.constant,
+.symbol,
+.deleted {
+  color: $primitive;
+}
+
+.boolean {
+  color: $boolean;
+}
+
+.tag {
+  color: $tag;
+}
+
+.string {
+  color: $string;
+}
+
+.punctuation {
+  color: $punctuation;
+}
+
+.selector,
+.char,
+.builtin,
+.inserted {
+  color: $char;
+}
+
+.function {
+  color: $function;
+}
+
+.operator,
+.entity,
+.url,
+.variable {
+  color: $variable;
+}
+
+.attr-value {
+  color: $string;
+}
+
+.keyword {
+  color: $keyword;
+}
+
+.atrule,
+.class-name {
+  color: $className;
+}
+
+.namespace {
+  opacity: 0.7;
+}
