@@ -1,9 +1,5 @@
 # [bdov.dev](https://bdov.dev)
 
-## My personal portfolio website.
-
-### Description :speech_balloon:
-
 The code behind the portfolio website profiling my code (so meta).
 
 - Blazing fast, all thanks to [GatsbyJS](https://gatsbyjs.org).
