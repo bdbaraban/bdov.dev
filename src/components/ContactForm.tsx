@@ -22,9 +22,12 @@ const ContactForm = (): ReactElement => {
       method="POST"
     >
       <div className="field">
-        <label className="label">Your Name</label>
+        <label htmlFor="name" className="label">
+          Your Name
+        </label>
         <div className="control">
           <input
+            id="name"
             className="input"
             type="text"
             name="name"
@@ -33,9 +36,12 @@ const ContactForm = (): ReactElement => {
         </div>
       </div>
       <div className="field">
-        <label className="label">Your Email</label>
+        <label htmlFor="email" className="label">
+          Your Email
+        </label>
         <div className="control">
           <input
+            id="email"
             className="input"
             type="email"
             name="_replyto"
@@ -44,9 +50,12 @@ const ContactForm = (): ReactElement => {
         </div>
       </div>
       <div className="field">
-        <label className="label">Subject</label>
+        <label htmlFor="subject" className="label">
+          Subject
+        </label>
         <div className="control">
           <input
+            id="subject"
             className="input"
             type="text"
             name="subject"
@@ -55,16 +64,21 @@ const ContactForm = (): ReactElement => {
         </div>
       </div>
       <div className="field">
-        <label className="label">Message</label>
+        <label htmlFor="message" className="label">
+          Message
+        </label>
         <div className="control">
           <textarea
+            id="message"
             className="textarea"
             placeholder="You know nothing, Brennan Baraban."
             name="message"
           ></textarea>
         </div>
       </div>
-      <input type="text" name="_gotcha" style={{ display: 'none' }} />
+      <label>
+        <input type="text" name="_gotcha" style={{ display: 'none' }} />
+      </label>
       <div className="field has-text-centered">
         <input className="button" type="submit" value="Submit" />
       </div>
