@@ -81,6 +81,10 @@ $tablet: 875px;
   border-radius: 4px;
 }
 
+.card-footer {
+  overflow: auto;
+}
+
 .tags {
   flex-direction: column;
 }
