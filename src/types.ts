@@ -38,6 +38,8 @@ export interface BlogTileProps {
   title: string;
   // Article description
   description: string;
+  // Article highlight (optional)
+  highlight?: string;
   // Link to article
   link: string;
   // Article posted date
