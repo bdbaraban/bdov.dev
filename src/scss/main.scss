@@ -1,0 +1,117 @@
+@charset "utf-8";
+@import './animation.scss';
+@import './background.scss';
+@import './code.scss';
+@import '../../node_modules/bulma/sass/utilities/initial-variables';
+
+/* Import Public Sans font */
+@font-face {
+  font-family: 'Public Sans';
+  src: url('../fonts/PublicSans-Medium.otf');
+}
+
+/* Set font */
+$family-sans-serif: 'Public Sans', sans-serif;
+$family-primary: $family-sans-serif;
+
+/* Set responsive breakpoints */
+$tablet: 875px;
+
+@import '../../node_modules/bulma/bulma';
+
+.hero,
+.hero-body,
+.hero-foot,
+.hero-head {
+  z-index: 1;
+}
+
+.navbar {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar > .level {
+  display: flex;
+  margin-bottom: 0;
+}
+
+.level-item .title {
+  margin-bottom: 1.5rem;
+}
+
+.container form {
+  max-width: 750px;
+}
+
+.label {
+  color: #fff;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  padding-bottom: 1rem;
+}
+
+.is-transparent {
+  background: transparent;
+}
+
+.is-fullwidth {
+  width: 100%;
+}
+
+.is-rounded {
+  border-radius: 100%;
+}
+
+.is-hcentered {
+  justify-content: center;
+}
+
+.is-200x200 {
+  height: 200px;
+  width: 200px;
+}
+
+.card {
+  border-radius: 4px;
+}
+
+.tags {
+  flex-direction: column;
+}
+
+.has-tags {
+  flex-direction: column;
+  justify-content: center;
+}
+
+span.tag {
+  align-self: center;
+  width: min-content;
+}
+
+.tag-icon {
+  color: $purple;
+  margin-left: 4px;
+}
+
+.project-icon {
+  font-size: 2em;
+  color: $brown;
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.social-icon {
+  font-size: 2em;
+  color: $black;
+  &:hover {
+    opacity: 0.7;
+  }
+}
