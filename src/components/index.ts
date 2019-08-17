@@ -1,0 +1,26 @@
+// Components barrel file
+export { default as Avatar } from './Avatar';
+export { default as Bio } from './Bio';
+export { default as BlogTile } from './BlogTile';
+export { default as Code } from './Code';
+export { default as ContactForm } from './ContactForm';
+export { default as Emoji } from './Emoji';
+export { default as Footer } from './Footer';
+export { default as Headshot } from './Headshot';
+export { default as Hero } from './Hero';
+export { default as HeroBody } from './HeroBody';
+export { default as HeroFoot } from './HeroFoot';
+export { default as HeroHead } from './HeroHead';
+export { default as IconRow } from './IconRow';
+export { default as Layout } from './Layout';
+export { default as Logo } from './Logo';
+export { default as Navbar } from './Navbar';
+export { default as ProgressCircle } from './ProgressCircle';
+export { default as ProjectTile } from './ProjectTile';
+export { default as ScrollArrow } from './ScrollArrow';
+export { default as SEO } from './SEO';
+export { default as Skills } from './Skills';
+export { default as SocialTile } from './SocialTile';
+export { default as Tag } from './Tag';
+export { default as TilesColumn } from './TilesColumn';
+export { default as TitleColumn } from './TitleColumn';
