@@ -21,13 +21,21 @@ const Bio = (): ReactElement => {
         I am a software engineer based in the San Francisco Bay Area. I develop
         full-stack with a particular love for front-end, especially React{' '}
         <Emoji label="atom-symbol" symbol="⚛️" />. Currently, I work mostly in
-        the modern ES6 ecosystem and Python, but I am always interested in
-        learning more, new, exciting technologies.
+        the modern JavaScript/Node.js ecosystem and Python, but I am always
+        interested in learning more, new, exciting technologies.
         <br />
         <br />
-        I find intuitive, delightful web applications inspiring. I try to bring
-        creativity and personality to my work - my recent project, IdeaDog, is a
-        fun social media ideas application inspired by my dog-related
+        In my work, I try my best to bring creativity and personality; my recent
+        project,{' '}
+        <a
+          className="has-text-warning"
+          href="https://ideadog.site"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          IdeaDog
+        </a>
+        , is a fun social media ideas application inspired by my dog-related
         entrepreneurial ideas <Emoji label="dog" symbol="🐕" />. In general, I
         am a think-outside-the-box programmer constantly looking to iterate and
         improve code.
