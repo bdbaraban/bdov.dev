@@ -48,7 +48,7 @@ const Bio = (): ReactElement => {
         <Emoji label="muscle" symbol="💪" />
         <Emoji label="video-game" symbol="🎮" />. I love coding, but know myself
         too well - I&apos;ll obsess over it daily - and pay active mind to
-        spending good time with good people while maintaining a healtful
+        spending good time with good people while maintaining a healthful
         work-life balance.
       </StyledDiv>
     </div>
