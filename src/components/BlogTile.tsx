@@ -5,10 +5,10 @@ import { getDateString, getDateTime } from '../utils';
 import { Emoji } from '.';
 
 /**
- * Custom styled list item
+ * Custom styled div for highlights
  */
-const StyledLi = styled.li`
-  margin-left: 1.5rem;
+const StyledDiv = styled.div`
+  align-items: center;
 `;
 
 /**
@@ -36,7 +36,10 @@ const BlogTile = ({
         </h6>
         <div className="content is-small">{description}</div>
         {highlight && (
-          <StyledLi className="content is-small">{highlight}</StyledLi>
+          <p className="content is-small is-flex">
+            <Emoji label="star" symbol="⭐" />
+            <p>{highlight}</p>
+          </p>
         )}
         <div className="card-footer">
           <time
