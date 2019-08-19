@@ -34,7 +34,8 @@ const BlogSection = (): ReactElement => {
         'https://medium.com/@bdov_/my-major-is-american-studies-9cb043853a6d',
       title: 'My Major is American Studies.',
       description:
-        'I know what you’re thinking: What are you going to do with that? To answer conciesly: I am going to be a software engineer.',
+        'I know what you’re thinking: What are you going to do with that? To answer concisely: I am going to be a software engineer.',
+      highlight: 'Featured on UC Davis American Studies department website.',
       date: new Date('2018-01-19'),
       minutes: 4,
       claps: 50
