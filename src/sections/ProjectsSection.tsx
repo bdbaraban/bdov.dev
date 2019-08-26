@@ -54,7 +54,7 @@ const ProjectsSection = (): ReactElement => {
     {
       title: 'Twenty Timer',
       link: 'https://snack.expo.io/@bdbaraban/twenty-timer',
-      github: 'https://github.com/bdbaraban/twenty_timer',
+      github: 'https://github.com/bdbaraban/twenty-timer',
       emoji: <Emoji label="eye" symbol="👁️" />,
       description:
         'A minimalist 20-20-20 eye care timer built in React Native Expo. Alerts 20-second breaks at 20-minute intervals. My first project working on mobile, and with React. Published on Expo Snack.',
