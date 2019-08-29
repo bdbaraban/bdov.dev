@@ -31,7 +31,7 @@ const ProjectsSection = (): ReactElement => {
       github: 'https://github.com/bdbaraban/ideadog',
       emoji: <Emoji label="dog" symbol="🐕" />,
       description:
-        'A social ideas platform. Front-end UI built using React, with TypeScript (built by yours truly), back-end API and server built in Rust, querying from an ArangoDB database (built by partner). Entirely functional components, asynchronous data fetching, passwordless authentication - a modern web app.',
+        'A social ideas platform. Front-end UI/UX designed and built using React, with TypeScript (built by yours truly), back-end API and server built in Rust, querying from an ArangoDB database (built by partner). Entirely functional components, asynchronous data fetching, passwordless authentication - a modern web app.',
       tools: ['React', 'TypeScript', 'Material-UI', 'Auth0']
     },
     {
@@ -53,12 +53,12 @@ const ProjectsSection = (): ReactElement => {
     },
     {
       title: 'Twenty Timer',
-      link: 'https://snack.expo.io/@bdbaraban/twenty-timer',
+      link: 'https://expo.io/@bdbaraban/twenty-timer',
       github: 'https://github.com/bdbaraban/twenty-timer',
       emoji: <Emoji label="eye" symbol="👁️" />,
       description:
-        'A minimalist 20-20-20 eye care timer built in React Native Expo. Alerts 20-second breaks at 20-minute intervals. My first project working on mobile, and with React. Published on Expo Snack.',
-      tools: ['React Native', 'Expo', 'JavaScript', 'MobX']
+        'A minimalist 20-minute/20-second eye care timer built in React Native Expo. Alerts 20-second breaks at 20-minute intervals. Published on Expo Snack with a CircleCI workflow.',
+      tools: ['React Native', 'Expo', 'TypeScript', 'MobX']
     }
   ];
 
