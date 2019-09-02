@@ -33,7 +33,7 @@ module.exports = {
         short_name: `bdov.dev`,
         start_url: `/`,
         background_color: `#1f5673`,
-        theme_color: `#8d5a97`,
+        theme_color: `#1f5673`,
         display: `standalone`,
         icon: `src/assets/logo.png`
       }
