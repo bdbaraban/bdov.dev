@@ -1,16 +1,22 @@
 import React, { ReactElement } from 'react';
 import { FaGithub } from 'react-icons/fa';
+import styled from 'styled-components';
 import {
-  Hero,
-  HeroHead,
-  HeroBody,
-  HeroFoot,
-  ProjectTile,
-  TilesColumn,
-  TitleColumn,
+  Arrow,
+  CardContainer,
+  IconRow,
+  ProjectCard,
+  SectionTitle,
   Emoji
-} from '../components';
-import { IconLink, ProjectTileProps } from '../types';
+} from 'components';
+import theme from 'utils/theme';
+import { IconLink, ProjectCardProps } from 'utils/types';
+
+// Custom styled Bulma CSS hero-body
+const StyledHeroBody = styled.div`
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+`;
 
 /**
  * Personal projects hero section
@@ -24,7 +30,7 @@ const ProjectsSection = (): ReactElement => {
     }
   ];
 
-  const projects: ProjectTileProps[] = [
+  const projects: ProjectCardProps[] = [
     {
       title: 'IdeaDog',
       link: 'https://ideadog.site',
@@ -40,7 +46,7 @@ const ProjectsSection = (): ReactElement => {
       emoji: <Emoji label="muscle" symbol="💪" />,
       description:
         'Full-stack Node.js CrossFit workout-tracking application. Integrates a server-side-rendered React app, MongoDB API and authenticated Express web server. Built on Next.js.',
-      tools: ['Next.js', 'MongoDB', 'Express', 'Passport.js']
+      tools: ['Next.js', 'TypeScript', 'MongoDB', 'Express', 'Passport.js']
     },
     {
       title: 'Holbertonbnb',
@@ -49,7 +55,7 @@ const ProjectsSection = (): ReactElement => {
       emoji: <Emoji label="house" symbol="🏠" />,
       description:
         'RESTful API and website based on Airbnb. Back-end Flask app built in Python and MySQL, HTML/CSS front-end made dynamic with jQuery. Pair programmed over four versions. Manually deployed on Gunicorn and Nginx.',
-      tools: ['Flask', 'MySQL', 'HTML/CSS', 'jQuery']
+      tools: ['Flask', 'MySQL', 'HTML/CSS', 'jQuery', 'Nginx', 'Gunicorn']
     },
     {
       title: 'Twenty Timer',
@@ -57,36 +63,41 @@ const ProjectsSection = (): ReactElement => {
       github: 'https://github.com/bdbaraban/twenty-timer',
       emoji: <Emoji label="eye" symbol="👁️" />,
       description:
-        'A minimalist 20-minute/20-second eye care timer built in React Native Expo. Alerts 20-second breaks at 20-minute intervals. Published on Expo Snack with a CircleCI workflow.',
-      tools: ['React Native', 'Expo', 'TypeScript', 'MobX']
+        'A minimalist 20-minute/20-second eye care timer built in React Native Expo. Alerts 20-second breaks at 20-minute intervals. Published on Expo with a CircleCI workflow.',
+      tools: [
+        'React Native',
+        'Expo',
+        'TypeScript',
+        'MobX',
+        'React Testing Library',
+        'CircleCI'
+      ]
     }
   ];
 
   return (
-    <Hero id="projects">
-      <div className="triangle" />
-      <HeroHead />
-      <HeroBody>
-        <TitleColumn title="Projects" icons={icons} />
-        <TilesColumn>
-          <div className="tile is-parent is-vertical">
-            {projects.slice(0, 2).map(
-              (project: ProjectTileProps, index: number): ReactElement => (
-                <ProjectTile key={index} {...project} />
-              )
-            )}
+    <section id="projects" className="hero">
+      <StyledHeroBody className="hero-body">
+        <div className="level is-flex is-fullwidth is-hcentered">
+          <div className="columns is-desktop is-fullwidth is-vcentered">
+            <div className="column is-full-touch is-one-quarter-desktop is-block has-text-centered">
+              <SectionTitle title="Projects" />
+              <IconRow icons={icons} />
+            </div>
+            <div className="column is-full-touch is-three-quarters-desktop is-paddingless has-text-centered">
+              <CardContainer>
+                {projects.map(
+                  (project, index): ReactElement => {
+                    return <ProjectCard key={index} {...project} />;
+                  }
+                )}
+              </CardContainer>
+              <Arrow color={theme.palette.brown} />
+            </div>
           </div>
-          <div className="tile is-parent is-vertical">
-            {projects.slice(2, 4).map(
-              (project: ProjectTileProps, index: number): ReactElement => (
-                <ProjectTile key={index} {...project} />
-              )
-            )}
-          </div>
-        </TilesColumn>
-      </HeroBody>
-      <HeroFoot className="has-text-centered" />
-    </Hero>
+        </div>
+      </StyledHeroBody>
+    </section>
   );
 };
 
