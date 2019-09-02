@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Brennan D Baraban: Software Engineer`,
+    title: `Brennan D Baraban`,
     description: `Brennan D Baraban is a full-stack software engineer based in the San Francisco Bay Area.`,
     author: `@bdov_`
   },
@@ -14,6 +14,14 @@ module.exports = {
       options: {
         name: `assets`,
         path: `${__dirname}/src/assets`
+      }
+    },
+    {
+      resolve: 'gatsby-plugin-react-svg',
+      options: {
+        rule: {
+          include: /assets/
+        }
       }
     },
     `gatsby-transformer-sharp`,
