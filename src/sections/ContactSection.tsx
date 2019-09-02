@@ -2,12 +2,28 @@ import React, { ReactElement } from 'react';
 import styled from 'styled-components';
 import { useStaticQuery, graphql } from 'gatsby';
 import { ContactForm } from 'components';
+import device from 'utils/device';
+
+// Custom styled Bulma CSS hero
+const StyledHero = styled.div`
+  position: relative;
+`;
 
 // Custom styled Bulma CSS hero-body
 const StyledHeroBody = styled.div`
   padding-bottom: 0 !important;
   @media (min-width: 1024px) {
     margin-bottom: 0;
+  }
+`;
+
+// Custom styled Bulma CSS hero-body
+const StyledColumn = styled.div`
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  @media (min-width: ${device.tablet}px) {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
   }
 `;
 
@@ -26,13 +42,13 @@ const ContactSection = (): ReactElement => {
   `);
 
   return (
-    <section id="contact" className="hero">
+    <StyledHero id="contact" className="hero is-fullheight">
       <div className="triangle" />
       <div className="hero-head" />
       <StyledHeroBody className="hero-body">
         <div className="level is-flex is-fullwidth is-hcentered">
           <div className="columns is-desktop is-fullwidth is-vcentered">
-            <div className="column is-full-touch is-two-fifths-desktop is-block has-text-centered">
+            <StyledColumn className="column is-full-touch is-two-fifths-desktop is-block has-text-centered">
               <h4 className="title is-3 has-text-white">Reach out to me!</h4>
               <h5 className="title is-5 has-text-white">
                 Read my{' '}
@@ -59,7 +75,7 @@ const ContactSection = (): ReactElement => {
                 .
               </h5>
               <h5 className="title is-5 has-text-white">Or, drop me a line:</h5>
-            </div>
+            </StyledColumn>
             <div
               id="form-column"
               className="column is-full-touch is-three-fifths-desktop has-text-centered"
@@ -70,7 +86,7 @@ const ContactSection = (): ReactElement => {
         </div>
       </StyledHeroBody>
       <div className="hero-foot" />
-    </section>
+    </StyledHero>
   );
 };
 
