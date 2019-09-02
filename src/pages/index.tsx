@@ -1,5 +1,5 @@
 import React, { ReactElement } from 'react';
-import { Layout, SEO } from '../components';
+import { Divider, Layout, SEO } from 'components';
 import {
   AboutSection,
   BlogSection,
@@ -7,20 +7,24 @@ import {
   ProjectsSection,
   SocialSection,
   TitleSection
-} from '../sections';
-import '../scss/main.scss';
+} from 'sections';
+import 'scss/main.scss';
 
 /**
- * Root page
+ * Root home page
  */
 const IndexPage = (): ReactElement => (
   <Layout>
-    <SEO title="Main" />
+    <SEO title="Home" />
     <TitleSection />
     <AboutSection />
+    <Divider />
     <ProjectsSection />
+    <Divider />
     <BlogSection />
+    <Divider />
     <SocialSection />
+    <Divider />
     <ContactSection />
   </Layout>
 );
