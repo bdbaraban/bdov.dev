@@ -1,14 +1,19 @@
-import React, { ReactElement, useEffect, useState } from 'react';
+import React, { ReactElement, useCallback, useEffect, useState } from 'react';
 import styled from 'styled-components';
+import theme from 'utils/theme';
 
-/**
- * Styled SVG
- */
-const SVG = styled.svg``;
+// Circle radius constant
+const RADIUS = 40;
 
-/**
- * Styled SVG circle
- */
+// Circle circumference constant
+const CIRCUMFERENCE = RADIUS * 2 * Math.PI;
+
+// Calculate scroll percentage
+const calculateProgress = (percent: number): number => {
+  return CIRCUMFERENCE - (percent / 100) * CIRCUMFERENCE;
+};
+
+// Styled SVG circle
 const Circle = styled.circle`
   transition: stroke-dashoffset;
   transform: rotate(-90deg);
@@ -17,37 +22,53 @@ const Circle = styled.circle`
 `;
 
 /**
- * Progress circle component prop types
- */
-interface ProgressCircleProps {
-  scroll: number;
-}
-
-/**
  * Scroll progress tracking circle
  */
-const ProgressCircle = ({ scroll }: ProgressCircleProps): ReactElement => {
-  const circumference = 40 * 2 * Math.PI;
+const ProgressCircle = (): ReactElement => {
+  const [scrollPosition, setScrollPosition] = useState<number>(0);
 
-  const calculateProgress = (percent: number): number => {
-    return circumference - (percent / 100) * circumference;
+  const getDocHeight = (): number => {
+    return Math.max(
+      document.body.scrollHeight,
+      document.documentElement.scrollHeight,
+      document.body.offsetHeight,
+      document.documentElement.offsetHeight,
+      document.body.clientHeight,
+      document.documentElement.clientHeight
+    );
   };
 
+  const calculateScrollDistance = useCallback((): void => {
+    const scrollTop = window.pageYOffset;
+    const winHeight = window.innerHeight;
+    const docHeight = getDocHeight();
+    const totalDocScrollLength = docHeight - winHeight;
+    setScrollPosition((scrollTop / totalDocScrollLength) * 100);
+  }, []);
+
+  useEffect((): void => {
+    document.addEventListener('scroll', (): void => {
+      requestAnimationFrame((): void => {
+        calculateScrollDistance();
+      });
+    });
+  }, [calculateScrollDistance]);
+
   return (
-    <SVG width="100" height="100">
+    <svg width="100" height="100">
       <Circle
-        stroke="#8d5a97"
+        stroke={theme.palette.purple}
         strokeWidth={4}
         fill="transparent"
-        r={40}
+        r={RADIUS}
         cx={50}
         cy={50}
         style={{
-          strokeDasharray: `${circumference} ${circumference}`,
-          strokeDashoffset: calculateProgress(scroll)
+          strokeDasharray: `${CIRCUMFERENCE} ${CIRCUMFERENCE}`,
+          strokeDashoffset: calculateProgress(scrollPosition)
         }}
       />
-    </SVG>
+    </svg>
   );
 };
 
