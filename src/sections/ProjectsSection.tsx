@@ -38,7 +38,7 @@ const ProjectsSection = (): ReactElement => {
       emoji: <Emoji label="dog" symbol="🐕" />,
       description:
         'A social ideas platform. Front-end UI/UX designed and built using React, with TypeScript (built by yours truly), back-end API and server built in Rust, querying from an ArangoDB database (built by partner). Entirely functional components, asynchronous data fetching, passwordless authentication - a modern web app.',
-      tools: ['React', 'TypeScript', 'Material-UI', 'Auth0']
+      tools: ['React', 'TypeScript', 'Material-UI', 'Auth0', 'Parcel']
     },
     {
       title: 'NextRX',
@@ -46,7 +46,14 @@ const ProjectsSection = (): ReactElement => {
       emoji: <Emoji label="muscle" symbol="💪" />,
       description:
         'Full-stack Node.js CrossFit workout-tracking application. Integrates a server-side-rendered React app, MongoDB API and authenticated Express web server. Built on Next.js.',
-      tools: ['Next.js', 'TypeScript', 'MongoDB', 'Express', 'Passport.js']
+      tools: [
+        'Next.js',
+        'TypeScript',
+        'MongoDB',
+        'Express.js',
+        'Passport.js',
+        'Grommet'
+      ]
     },
     {
       title: 'Holbertonbnb',
@@ -72,6 +79,14 @@ const ProjectsSection = (): ReactElement => {
         'React Testing Library',
         'CircleCI'
       ]
+    },
+    {
+      title: 'shellby',
+      github: 'https://github.com/bdbaraban/simple_shell',
+      emoji: <Emoji label="spiral-shell" symbol="🐚️" />,
+      description:
+        'Simple UNIX shell built in C. Pair programmed for the Holberton School year one curriculum. Implements advanced features including PATH handling, command separators, history and more.',
+      tools: ['C', 'Valgrind', 'Unix', 'Linux']
     }
   ];
 
