@@ -2,18 +2,14 @@ import React, { ReactElement } from 'react';
 import Helmet from 'react-helmet';
 import { useStaticQuery, graphql } from 'gatsby';
 
-/**
- * React helmet meta type
- */
+// React helmet meta type
 interface MetaObject {
   name: string;
   content: any;
   property?: undefined;
 }
 
-/**
- * SEO component prop types
- */
+// SEO component prop types
 interface SEOProps {
   description?: string;
   lang?: string;
