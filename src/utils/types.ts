@@ -15,7 +15,7 @@ export interface IconLink {
 /**
  * Personal project information for project tiles
  */
-export interface ProjectTileProps {
+export interface ProjectCardProps {
   // Name of project
   title: string;
   // Project emoji (displayed with title)
@@ -33,7 +33,7 @@ export interface ProjectTileProps {
 /**
  * Blog article information for project tiles
  */
-export interface BlogTileProps {
+export interface BlogCardProps {
   // Article title
   title: string;
   // Article description
@@ -53,7 +53,7 @@ export interface BlogTileProps {
 /**
  * Social post information for project tiles
  */
-export interface SocialTileProps {
+export interface SocialCardProps {
   // Link to post
   link: string;
   // Post content

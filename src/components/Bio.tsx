@@ -1,14 +1,5 @@
 import React, { ReactElement } from 'react';
-import styled from 'styled-components';
-import { Emoji } from '.';
-
-/**
- * Custom styled bio div
- */
-const StyledDiv = styled.div`
-  margin: 0 auto;
-  width: 80%;
-`;
+import { Emoji } from 'components';
 
 /**
  * 'About Me' biography
@@ -17,7 +8,7 @@ const Bio = (): ReactElement => {
   return (
     <div className="column is-full-touch is-half has-text-centered">
       <div className="title is-3 has-text-white">About Me</div>
-      <StyledDiv className="content has-text-white bio">
+      <div className="content bio has-text-white">
         I am a software engineer based in the San Francisco Bay Area. I develop
         full-stack with a particular love for front-end, especially React{' '}
         <Emoji label="atom-symbol" symbol="⚛️" />. Currently, I work mostly in
@@ -50,7 +41,7 @@ const Bio = (): ReactElement => {
         too well - I&apos;ll obsess over it daily - and pay active mind to
         spending good time with good people while maintaining a healthful
         work-life balance.
-      </StyledDiv>
+      </div>
     </div>
   );
 };

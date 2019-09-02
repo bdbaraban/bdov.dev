@@ -1,44 +1,49 @@
 import React, { ReactElement } from 'react';
 import { Link } from 'react-scroll';
+import { useMediaQuery } from 'react-responsive';
 import styled from 'styled-components';
-import { Logo, ProgressCircle } from '.';
+import { Logo, ProgressBar, ProgressCircle } from 'components';
+import device from 'utils/device';
 
-/**
- * Custom styled react-scroll Link
- */
+// Custom styled react-scroll Link
 const StyledLink = styled(Link)`
   color: #fff;
   font-size: 1.25rem;
-  margin-right: 1em;
 `;
 
-/**
- * Navbar component prop types
- */
-interface NavbarProps {
-  scrollPosition: number;
-}
+// Custom styled level div
+const StyledLevel = styled.div`
+  align-items: center;
+  justify-content: center !important;
+  width: 100px;
+`;
 
 /**
  * Fixed navbar containing title logo and contact links
  */
-const Navbar = ({ scrollPosition }: NavbarProps): ReactElement => {
-  return (
-    <nav className="navbar is-fixed-top is-transparent" role="navigation">
-      <div className="level">
-        <ProgressCircle scroll={scrollPosition} />
-        <Logo />
-      </div>
+const Navbar = (): ReactElement => {
+  const isTablet = useMediaQuery({
+    query: `(min-width: ${device.tablet}px)`
+  });
 
-      <StyledLink
-        to="contact"
-        spy={true}
-        smooth={true}
-        duration={1000}
-        tabIndex={0}
-      >
-        Contact
-      </StyledLink>
+  return (
+    <nav className="navbar is-transparent is-fixed-top" role="navigation">
+      <StyledLevel className="level">
+        {isTablet ? <ProgressCircle /> : <ProgressBar />}
+        <Logo />
+      </StyledLevel>
+
+      <StyledLevel className="level">
+        <StyledLink
+          to="contact"
+          spy={true}
+          smooth={true}
+          duration={1000}
+          tabIndex={0}
+        >
+          Contact
+        </StyledLink>
+      </StyledLevel>
     </nav>
   );
 };

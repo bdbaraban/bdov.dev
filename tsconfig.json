@@ -4,6 +4,13 @@
     "target": "esnext",
     "jsx": "preserve",
     "lib": ["dom", "esnext"],
+    "baseUrl": "src",
+    "paths": {
+      "components": ["components"],
+      "scss/*": ["scss/*"],
+      "sections": ["sections"],
+      "utils/*": ["utils/*"]
+    },
     "strict": true,
     "noEmit": true,
     "isolatedModules": true,

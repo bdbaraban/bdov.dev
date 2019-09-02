@@ -1,12 +1,5 @@
 @charset "utf-8";
-
-$blue: #1f5673;
-$brown: #664c43;
-$yellow: #f4d06f;
-$black: #1a1f16;
-$purple: #8d5a97;
-$orange: #d5573b;
-$grey: #6e7271;
+@import 'scss/colors.scss';
 
 html,
 body {
@@ -14,55 +7,37 @@ body {
 }
 
 .triangle {
-  width: 100vw;
-  height: 100vh;
+  height: 100%;
   position: absolute;
+  width: 100%;
+  z-index: 1;
 }
 
 #title {
   .triangle {
-    clip-path: polygon(50% 100%, 2% 85%, 100% 0);
-    background: $black;
-    background: linear-gradient(90deg, $black 50%, $blue 100%);
+    background: linear-gradient(to right, $dark-blue, $blue);
+    -webkit-clip-path: polygon(50% 0%, 100% 0, 100% 65%, 50% 100%, 0 65%, 0 0);
+    clip-path: polygon(50% 0%, 100% 0, 100% 65%, 50% 100%, 0 65%, 0 0);
   }
 }
 
 #about {
-  .triangle {
-    background: $blue;
-    background: linear-gradient(90deg, $blue 0%, $orange 75%);
-    clip-path: polygon(15% 50%, 95% 15%, 95% 90%);
-  }
-}
-
-#projects {
-  .triangle {
-    background: $blue;
-    background: linear-gradient(90deg, $blue 0%, $brown 50%);
-    clip-path: polygon(96% 100%, 99% 62%, 0 0);
-  }
-}
-
-#blog {
-  .triangle {
-    background: $yellow;
-    background: linear-gradient(90deg, $yellow 25%, $blue 100%);
-    clip-path: polygon(5% 88%, 15% 21%, 81% 67%);
-  }
-}
-
-#social {
-  .triangle {
-    background: $black;
-    background: linear-gradient(90deg, $black 50%, $blue 100%);
-    clip-path: polygon(0 14%, 78% 86%, 100% 27%);
+  .hero-body {
+    background: $medium-blue;
+    border-radius: 4px;
   }
 }
 
 #contact {
+  background: linear-gradient(to right, $blue, $dark-blue);
   .triangle {
     background: $blue;
-    background: linear-gradient(0deg, $blue 0%, $grey 50%);
-    clip-path: polygon(50% 95%, 5% 15%, 95% 15%);
+    -webkit-clip-path: polygon(50% 0%, 100% 0, 100% 35%, 50% 0, 0 35%, 0 0);
+    clip-path: polygon(50% 0%, 100% 0, 100% 35%, 50% 0, 0 35%, 0 0);
+    height: calc(100% - 100px);
   }
+}
+
+.footer {
+  background: linear-gradient(to right, $blue, $dark-blue);
 }

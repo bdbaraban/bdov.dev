@@ -1,30 +1,31 @@
 import React, { ReactElement, useCallback, useEffect, useState } from 'react';
 import styled from 'styled-components';
-import theme from 'utils/theme';
 
-// Circle radius constant
-const RADIUS = 40;
+// Progress prop types
+interface ProgressPropTypes {
+  scroll: number;
+}
 
-// Circle circumference constant
-const CIRCUMFERENCE = RADIUS * 2 * Math.PI;
-
-// Calculate scroll percentage
-const calculateProgress = (percent: number): number => {
-  return CIRCUMFERENCE - (percent / 100) * CIRCUMFERENCE;
-};
-
-// Styled SVG circle
-const Circle = styled.circle`
-  transition: stroke-dashoffset;
-  transform: rotate(-90deg);
-  transform-origin: 50% 50%;
+// Progress bar styled component
+const Progress = styled.div`
+  top: 0;
+  left: 0;
+  position: fixed;
+  background-repeat: no-repeat;
+  background: linear-gradient(
+    to right,
+    #8d5a97 ${({ scroll }: ProgressPropTypes): string => `${scroll}%`},
+    transparent 0
+  );
+  width: 100%;
+  height: 4px;
   z-index: 3;
 `;
 
 /**
- * Scroll progress tracking circle
+ * Scroll progress tracking bar
  */
-const ProgressCircle = (): ReactElement => {
+const ProgressBar = (): ReactElement => {
   const [scrollPosition, setScrollPosition] = useState<number>(0);
 
   const getDocHeight = (): number => {
@@ -54,22 +55,7 @@ const ProgressCircle = (): ReactElement => {
     });
   }, [calculateScrollDistance]);
 
-  return (
-    <svg width="100" height="100">
-      <Circle
-        stroke={theme.palette.purple}
-        strokeWidth={4}
-        fill="transparent"
-        r={RADIUS}
-        cx={50}
-        cy={50}
-        style={{
-          strokeDasharray: `${CIRCUMFERENCE} ${CIRCUMFERENCE}`,
-          strokeDashoffset: calculateProgress(scrollPosition)
-        }}
-      />
-    </svg>
-  );
+  return <Progress scroll={scrollPosition} />;
 };
 
-export default ProgressCircle;
+export default ProgressBar;

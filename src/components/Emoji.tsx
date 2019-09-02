@@ -1,22 +1,20 @@
-import React, { ReactElement } from 'react';
+import React, { HTMLAttributes, ReactElement } from 'react';
 
-/**
- * Emoji component prop types
- */
-interface EmojiProps {
-  label: string;
+// Emoji component prop types
+interface EmojiProps extends HTMLAttributes<HTMLSpanElement> {
+  label?: string;
   symbol: string;
 }
 
 /**
  * Generic a11y-friendly Emoji component
  */
-const Emoji = ({ label, symbol }: EmojiProps): ReactElement => (
+const Emoji = ({ label, symbol, ...rest }: EmojiProps): ReactElement => (
   <span
-    className="emoji"
+    aria-hidden={label !== undefined ? undefined : 'true'}
+    aria-label={label}
     role="img"
-    aria-label={label ? label : ''}
-    aria-hidden={label ? 'false' : 'true'}
+    {...rest}
   >
     {symbol}
   </span>

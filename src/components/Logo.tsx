@@ -4,9 +4,7 @@ import Img from 'gatsby-image';
 import { Link } from 'react-scroll';
 import styled from 'styled-components';
 
-/**
- * Custom styled react-scroll Link
- */
+// Custom styled react-scroll Link
 const StyledLink = styled(Link)`
   position: absolute;
   left: 26px;
@@ -18,7 +16,7 @@ const StyledLink = styled(Link)`
 const Logo = (): ReactElement => {
   const data = useStaticQuery(graphql`
     query {
-      placeholderImage: file(relativePath: { eq: "logo.png" }) {
+      placeholderImage: file(relativePath: { eq: "images/logo.png" }) {
         childImageSharp {
           fixed(width: 50, height: 50) {
             ...GatsbyImageSharpFixed

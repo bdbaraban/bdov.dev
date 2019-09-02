@@ -1,20 +1,27 @@
 import React, { ReactElement } from 'react';
 import { FaGlobe, FaGithub } from 'react-icons/fa';
-import { ProjectTileProps } from '../types';
+import styled from 'styled-components';
+import theme from 'utils/theme';
+import { ProjectCardProps } from 'utils/types';
+
+// Custom styled Bulma CSS card
+const StyledCard = styled.article`
+  border: 6px solid ${theme.palette.brown};
+`;
 
 /**
- * Tile-card for personal projects
+ * Card for personal projects
  */
-const ProjectTile = ({
+const ProjectCard = ({
   title,
   emoji,
   link,
   github,
   description,
   tools
-}: ProjectTileProps): ReactElement => {
+}: ProjectCardProps): ReactElement => {
   return (
-    <article className="tile is-child card hvr-grow-shadow">
+    <StyledCard className="card hvr-grow-shadow has-text-left">
       <header className="card-header">
         <h6 className="card-header-title">
           {title} {emoji}
@@ -41,7 +48,7 @@ const ProjectTile = ({
         </a>
       </header>
       <div className="card-content">
-        <div className="content is-small">{description}</div>
+        <div className="content">{description}</div>
       </div>
       <footer className="card-footer">
         {tools.map(
@@ -52,8 +59,8 @@ const ProjectTile = ({
           )
         )}
       </footer>
-    </article>
+    </StyledCard>
   );
 };
 
-export default ProjectTile;
+export default ProjectCard;

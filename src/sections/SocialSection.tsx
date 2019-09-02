@@ -1,17 +1,31 @@
 import React, { ReactElement } from 'react';
+import styled from 'styled-components';
 import { FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa';
 import {
-  Hero,
-  HeroHead,
-  HeroBody,
-  HeroFoot,
-  SocialTile,
-  TilesColumn,
-  TitleColumn,
-  Emoji
-} from '../components';
-import { IconLink, SocialTileProps } from '../types';
+  Arrow,
+  CardContainer,
+  Emoji,
+  IconRow,
+  SectionTitle,
+  SocialCard
+} from 'components';
+import theme from 'utils/theme';
+import { IconLink, SocialCardProps } from 'utils/types';
 
+// Custom styled Bulma CSS hero-body
+const StyledHeroBody = styled.div`
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+`;
+
+// Custom styled non-interactive link for hashtags
+const StyledText = styled.span`
+  color: ${theme.palette.blue};
+`;
+
+/**
+ * Social links hero section
+ */
 const SocialSection = (): ReactElement => {
   const icons: IconLink[] = [
     {
@@ -31,39 +45,19 @@ const SocialSection = (): ReactElement => {
     }
   ];
 
-  const tweets: SocialTileProps[] = [
+  const tweets: SocialCardProps[] = [
     {
       content: (
         <h4 className="content">
           &quot;Finished another iteration of my portfolio site. My React skills
           have come a long way - pulled off a complete conversion onto{' '}
-          <a
-            href="https://twitter.com/gatsbyjs"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            @gatsbyjs
-          </a>{' '}
-          in less than a week. It&apos;s all about those incremental
-          improvements.{' '}
-          <a href="#" tabIndex={-1}>
-            #portfolio
-          </a>{' '}
-          <a href="#" tabIndex={-1}>
-            #react
-          </a>{' '}
-          <a href="#" tabIndex={-1}>
-            #bulmacss
-          </a>{' '}
-          <a href="#" tabIndex={-1}>
-            #zeitnow
-          </a>
+          <StyledText>@gatsbyjs</StyledText> in less than a week. It&apos;s all
+          about those incremental improvements.{' '}
+          <StyledText>#portfolio</StyledText> <StyledText>#react</StyledText>{' '}
+          <StyledText>#bulmacss</StyledText> <StyledText>#zeitnow</StyledText>
           <br />
           <br />
-          Check it out!{' '}
-          <a href="https://bdov.dev" target="_blank" rel="noopener noreferrer">
-            bdov.dev
-          </a>
+          Check it out! <StyledText>bdov.dev</StyledText>
           &quot;
         </h4>
       ),
@@ -86,8 +80,10 @@ const SocialSection = (): ReactElement => {
     {
       content: (
         <h4 className="content">
-          &quot;I really like React. <a tabIndex={-1}>#React</a>{' '}
-          <a tabIndex={-1}>#JavaScript</a> <a tabIndex={-1}>#TypeScript</a>
+          &quot;I really like React.{' '}
+          <StyledText tabIndex={-1}>#React</StyledText>{' '}
+          <StyledText tabIndex={-1}>#JavaScript</StyledText>{' '}
+          <StyledText tabIndex={-1}>#TypeScript</StyledText>
           &quot;
         </h4>
       ),
@@ -109,30 +105,28 @@ const SocialSection = (): ReactElement => {
   ];
 
   return (
-    <Hero id="social">
-      <div className="triangle" />
-      <HeroHead />
-      <HeroBody>
-        <TitleColumn title="Social" icons={icons} />
-        <TilesColumn>
-          <div className="tile is-parent is-vertical">
-            {tweets.slice(0, 2).map(
-              (tweet: SocialTileProps, index: number): ReactElement => (
-                <SocialTile key={index} {...tweet} />
-              )
-            )}
+    <section id="social" className="hero">
+      <StyledHeroBody className="hero-body">
+        <div className="level is-flex is-fullwidth is-hcentered">
+          <div className="columns is-desktop is-fullwidth is-vcentered">
+            <div className="column is-full-touch is-one-quarter-desktop is-block has-text-centered">
+              <SectionTitle title="Social" />
+              <IconRow icons={icons} />
+            </div>
+            <div className="column is-full-touch is-three-quarters-desktop is-paddingless has-text-centered">
+              <CardContainer>
+                {tweets.map(
+                  (tweet, index): ReactElement => {
+                    return <SocialCard key={index} {...tweet} />;
+                  }
+                )}
+              </CardContainer>
+              <Arrow color={theme.palette.black} />
+            </div>
           </div>
-          <div className="tile is-parent is-vertical">
-            {tweets.slice(2, 4).map(
-              (tweet: SocialTileProps, index: number): ReactElement => (
-                <SocialTile key={index} {...tweet} />
-              )
-            )}
-          </div>
-        </TilesColumn>
-      </HeroBody>
-      <HeroFoot className="has-text-centered" />
-    </Hero>
+        </div>
+      </StyledHeroBody>
+    </section>
   );
 };
 

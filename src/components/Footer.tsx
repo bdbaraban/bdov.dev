@@ -1,9 +1,7 @@
 import React, { ReactElement } from 'react';
 import styled from 'styled-components';
 
-/**
- * Custom styled container
- */
+// Custom styled container
 const StyledDiv = styled.div`
   max-width: 80%;
 `;
@@ -13,7 +11,7 @@ const StyledDiv = styled.div`
  */
 const Footer = (): ReactElement => {
   return (
-    <footer className="footer is-transparent is-centered">
+    <footer className="footer">
       <StyledDiv className="content has-text-centered has-text-white">
         <p>
           Made with{' '}

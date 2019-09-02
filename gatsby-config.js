@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Brennan D Baraban: Software Engineer`,
+    title: `Brennan D Baraban`,
     description: `Brennan D Baraban is a full-stack software engineer based in the San Francisco Bay Area.`,
     author: `@bdov_`
   },
@@ -16,6 +16,14 @@ module.exports = {
         path: `${__dirname}/src/assets`
       }
     },
+    {
+      resolve: 'gatsby-plugin-react-svg',
+      options: {
+        rule: {
+          include: /assets/
+        }
+      }
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -25,9 +33,9 @@ module.exports = {
         short_name: `bdov.dev`,
         start_url: `/`,
         background_color: `#1f5673`,
-        theme_color: `#8d5a97`,
+        theme_color: `#1f5673`,
         display: `standalone`,
-        icon: `src/assets/logo.png`
+        icon: `src/assets/images/logo.png`
       }
     },
     `gatsby-plugin-offline`

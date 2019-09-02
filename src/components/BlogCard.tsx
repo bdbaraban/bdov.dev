@@ -1,20 +1,20 @@
 import React, { ReactElement } from 'react';
 import styled from 'styled-components';
-import { BlogTileProps } from '../types';
-import { getDateString, getDateTime } from '../utils';
-import { Emoji } from '.';
+import { Emoji } from 'components';
+import getDateString from 'utils/getDateString';
+import getDateTime from 'utils/getDateTime';
+import theme from 'utils/theme';
+import { BlogCardProps } from 'utils/types';
 
-/**
- * Custom styled div for highlights
- */
-const StyledDiv = styled.div`
-  align-items: center;
+// Custom styled Bulma CSS card
+const StyledCard = styled.article`
+  border: 6px solid ${theme.palette.yellow};
 `;
 
 /**
- * Tile-card for blog articles
+ * Card for blog articles
  */
-const BlogTile = ({
+const BlogCard = ({
   title,
   link,
   description,
@@ -22,21 +22,21 @@ const BlogTile = ({
   date,
   minutes,
   claps
-}: BlogTileProps): ReactElement => {
+}: BlogCardProps): ReactElement => {
   const dateTime = getDateTime(date);
   const dateString = getDateString(date);
 
   return (
-    <article className="tile is-child card hvr-grow-shadow">
+    <StyledCard className="card hvr-grow-shadow has-text-left">
       <div className="card-content">
-        <h6 className="title is-6">
+        <h6 className="title is-5">
           <a href={link} target="_blank" rel="noopener noreferrer">
             {title}
           </a>
         </h6>
-        <div className="content is-small">{description}</div>
+        <div className="content">{description}</div>
         {highlight && (
-          <p className="content is-small is-flex">
+          <p className="content is-flex">
             <Emoji label="star" symbol="⭐" />
             <p>{highlight}</p>
           </p>
@@ -59,8 +59,8 @@ const BlogTile = ({
           )}
         </div>
       </div>
-    </article>
+    </StyledCard>
   );
 };
 
-export default BlogTile;
+export default BlogCard;

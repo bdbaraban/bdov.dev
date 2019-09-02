@@ -1,17 +1,25 @@
 import React, { ReactElement } from 'react';
+import styled from 'styled-components';
 import { FaTwitter } from 'react-icons/fa';
-import { SocialTileProps } from '../types';
-import { getDateString, getDateTime } from '../utils';
+import getDateString from 'utils/getDateString';
+import getDateTime from 'utils/getDateTime';
+import theme from 'utils/theme';
+import { SocialCardProps } from 'utils/types';
+
+// Custom styled Bulma CSS card
+const StyledCard = styled.article`
+  border: 6px solid ${theme.palette.black};
+`;
 
 /**
- * Tile-card for social posts
+ * Card for social posts
  */
-const SocialTile = ({ link, content, date }: SocialTileProps): ReactElement => {
+const SocialTile = ({ link, content, date }: SocialCardProps): ReactElement => {
   const dateTime = getDateTime(date);
   const dateString = getDateString(date);
 
   return (
-    <article className="tile is-child card hvr-grow-shadow">
+    <StyledCard className="card hvr-grow-shadow has-text-left">
       <div className="card-content">
         {content}
         <div className="card-footer">
@@ -34,7 +42,7 @@ const SocialTile = ({ link, content, date }: SocialTileProps): ReactElement => {
           </div>
         </div>
       </div>
-    </article>
+    </StyledCard>
   );
 };
 

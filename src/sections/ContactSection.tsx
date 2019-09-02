@@ -1,7 +1,19 @@
 import React, { ReactElement } from 'react';
+import styled from 'styled-components';
 import { useStaticQuery, graphql } from 'gatsby';
-import { ContactForm, Hero, HeroHead, HeroBody, HeroFoot } from '../components';
+import { ContactForm } from 'components';
 
+// Custom styled Bulma CSS hero-body
+const StyledHeroBody = styled.div`
+  padding-bottom: 0 !important;
+  @media (min-width: 1024px) {
+    margin-bottom: 0;
+  }
+`;
+
+/**
+ * Contact info hero section
+ */
 const ContactSection = (): ReactElement => {
   const data = useStaticQuery(graphql`
     {
@@ -14,42 +26,51 @@ const ContactSection = (): ReactElement => {
   `);
 
   return (
-    <Hero id="contact">
+    <section id="contact" className="hero">
       <div className="triangle" />
-      <HeroHead />
-      <HeroBody>
-        <div className="container has-text-centered">
-          <h4 className="title is-3 has-text-white">Reach out to me!</h4>
-          <h5 className="title is-5 has-text-white">
-            Read my{' '}
-            <a
-              className="has-text-warning"
-              href={data.file.publicURL}
-              target="_blank"
-              rel="noopener noreferrer"
+      <div className="hero-head" />
+      <StyledHeroBody className="hero-body">
+        <div className="level is-flex is-fullwidth is-hcentered">
+          <div className="columns is-desktop is-fullwidth is-vcentered">
+            <div className="column is-full-touch is-two-fifths-desktop is-block has-text-centered">
+              <h4 className="title is-3 has-text-white">Reach out to me!</h4>
+              <h5 className="title is-5 has-text-white">
+                Read my{' '}
+                <a
+                  className="has-text-warning"
+                  href={data.file.publicURL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  resume
+                </a>
+                .
+              </h5>
+              <h5 className="title is-5 has-text-white">
+                Connect with me on{' '}
+                <a
+                  className="has-text-warning"
+                  href="https://linkedin.com/in/bdbaraban"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  LinkedIn
+                </a>
+                .
+              </h5>
+              <h5 className="title is-5 has-text-white">Or, drop me a line:</h5>
+            </div>
+            <div
+              id="form-column"
+              className="column is-full-touch is-three-fifths-desktop has-text-centered"
             >
-              resume
-            </a>
-            .
-          </h5>
-          <h5 className="title is-5 has-text-white">
-            Connect with me on{' '}
-            <a
-              className="has-text-warning"
-              href="https://linkedin.com/in/bdbaraban"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              LinkedIn
-            </a>
-            .
-          </h5>
-          <h5 className="title is-5 has-text-white">Or, drop me a line:</h5>
-          <ContactForm />
+              <ContactForm />
+            </div>
+          </div>
         </div>
-      </HeroBody>
-      <HeroFoot className="has-text-centered" />
-    </Hero>
+      </StyledHeroBody>
+      <div className="hero-foot" />
+    </section>
   );
 };
 

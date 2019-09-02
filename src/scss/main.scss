@@ -1,35 +1,43 @@
 @charset "utf-8";
-@import './animation.scss';
-@import './background.scss';
-@import './code.scss';
-@import '../../node_modules/bulma/sass/utilities/initial-variables';
+@import 'scss/animation.scss';
+@import 'scss/background.scss';
+@import 'scss/colors.scss';
+@import 'scss/code.scss';
+@import 'bulma/sass/utilities/initial-variables';
 
 /* Import Public Sans font */
 @font-face {
   font-family: 'Public Sans';
-  src: url('../fonts/PublicSans-Medium.otf');
+  src: url('../assets/fonts/PublicSans-Medium.otf');
 }
 
 /* Set font */
 $family-sans-serif: 'Public Sans', sans-serif;
 $family-primary: $family-sans-serif;
 
-/* Set responsive breakpoints */
-$tablet: 875px;
+@import 'bulma/bulma';
 
-@import '../../node_modules/bulma/bulma';
-
-.hero,
-.hero-body,
-.hero-foot,
-.hero-head {
-  z-index: 1;
+.hero-body {
+  margin-left: 5px;
+  margin-right: 5px;
+  z-index: 2;
+  @media (min-width: $tablet) {
+    margin-left: 100px;
+    margin-right: 100px;
+  }
 }
 
 .navbar {
   align-items: center;
   display: flex;
+  height: 100px;
   justify-content: space-between;
+  &.is-fixed-top {
+    position: absolute;
+    @media (min-width: $tablet) {
+      position: fixed;
+    }
+  }
 }
 
 .navbar > .level {
@@ -37,23 +45,41 @@ $tablet: 875px;
   margin-bottom: 0;
 }
 
+.bio {
+  margin: 0 auto;
+  width: 100%;
+  @media (min-width: $tablet) {
+    width: 80%;
+  }
+}
+
 .level-item .title {
   margin-bottom: 1.5rem;
+}
+
+#form-column {
+  padding-left: 0;
+  padding-right: 0;
+  @media (min-width: $tablet) {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
 }
 
 .container form {
   max-width: 750px;
 }
 
-.label {
-  color: #fff;
-}
-
 .footer {
+  align-items: center;
   display: flex;
+  height: 100px;
   justify-content: center;
+  left: 0;
   padding: 0;
-  padding-bottom: 1rem;
+  position: absolute;
+  right: 0;
+  z-index: 30;
 }
 
 .is-transparent {
@@ -68,6 +94,10 @@ $tablet: 875px;
   border-radius: 100%;
 }
 
+.is-centered {
+  margin: 0 auto;
+}
+
 .is-hcentered {
   justify-content: center;
 }
@@ -79,6 +109,12 @@ $tablet: 875px;
 
 .card {
   border-radius: 4px;
+  height: auto;
+  margin: 15px;
+  min-width: 18.75rem;
+  @media (min-width: $tablet) {
+    min-width: 350px;
+  }
 }
 
 .card-footer {
@@ -86,7 +122,10 @@ $tablet: 875px;
 }
 
 .tags {
-  flex-direction: column;
+  flex-direction: row;
+  @media (min-width: $tablet) {
+    flex-direction: column;
+  }
 }
 
 .has-tags {

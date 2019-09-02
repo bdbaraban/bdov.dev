@@ -1,34 +1,35 @@
 import React, { ReactElement } from 'react';
-import { FaHeading, FaMedium } from 'react-icons/fa';
+import styled from 'styled-components';
+import { FaMedium } from 'react-icons/fa';
 import {
-  BlogTile,
-  Hero,
-  HeroHead,
-  HeroBody,
-  HeroFoot,
-  TitleColumn,
-  TilesColumn
-} from '../components';
-import { BlogTileProps } from '../types';
+  Arrow,
+  BlogCard,
+  CardContainer,
+  IconRow,
+  SectionTitle
+} from 'components';
+import theme from 'utils/theme';
+import { BlogCardProps, IconLink } from 'utils/types';
+
+// Custom styled Bulma CSS hero-body
+const StyledHeroBody = styled.div`
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+`;
 
 /**
  * Blog articles hero section
  */
 const BlogSection = (): ReactElement => {
-  const icons = [
+  const icons: IconLink[] = [
     {
       href: 'https://medium.com/@bdov_',
       label: 'medium',
       element: <FaMedium />
-    },
-    {
-      href: 'https://www.holbertonschool.com/coding-resource-pointers-in-c',
-      label: 'H',
-      element: <FaHeading />
     }
   ];
 
-  const articles: BlogTileProps[] = [
+  const articles: BlogCardProps[] = [
     {
       link:
         'https://medium.com/@bdov_/my-major-is-american-studies-9cb043853a6d',
@@ -75,30 +76,28 @@ const BlogSection = (): ReactElement => {
   ];
 
   return (
-    <Hero id="blog">
-      <div className="triangle" />
-      <HeroHead />
-      <HeroBody>
-        <TitleColumn title="Blog" icons={icons} />
-        <TilesColumn>
-          <div className="tile is-parent is-vertical">
-            {articles.slice(0, 2).map(
-              (article: BlogTileProps, index: number): ReactElement => (
-                <BlogTile key={index} {...article} />
-              )
-            )}
+    <section id="blog" className="hero">
+      <StyledHeroBody className="hero-body">
+        <div className="level is-flex is-fullwidth is-hcentered">
+          <div className="columns is-desktop is-fullwidth is-vcentered">
+            <div className="column is-full-touch is-one-quarter-desktop is-block has-text-centered">
+              <SectionTitle title="Blog" />
+              <IconRow icons={icons} />
+            </div>
+            <div className="column is-full-touch is-three-quarters-desktop is-paddingless has-text-centered">
+              <CardContainer>
+                {articles.map(
+                  (article, index): ReactElement => {
+                    return <BlogCard key={index} {...article} />;
+                  }
+                )}
+              </CardContainer>
+              <Arrow color={theme.palette.yellow} />
+            </div>
           </div>
-          <div className="tile is-parent is-vertical">
-            {articles.slice(2, 4).map(
-              (article: BlogTileProps, index: number): ReactElement => (
-                <BlogTile key={index} {...article} />
-              )
-            )}
-          </div>
-        </TilesColumn>
-      </HeroBody>
-      <HeroFoot className="has-text-centered" />
-    </Hero>
+        </div>
+      </StyledHeroBody>
+    </section>
   );
 };
 
