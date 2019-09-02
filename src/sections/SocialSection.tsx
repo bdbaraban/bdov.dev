@@ -19,10 +19,8 @@ const StyledHeroBody = styled.div`
 `;
 
 // Custom styled non-interactive link for hashtags
-const Hashtag = styled.button`
-  color: ${theme.palette.black}
-  cursor: pointer;
-  text-decoration: none;
+const StyledText = styled.span`
+  color: ${theme.palette.blue};
 `;
 
 /**
@@ -53,24 +51,13 @@ const SocialSection = (): ReactElement => {
         <h4 className="content">
           &quot;Finished another iteration of my portfolio site. My React skills
           have come a long way - pulled off a complete conversion onto{' '}
-          <a
-            href="https://twitter.com/gatsbyjs"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            @gatsbyjs
-          </a>{' '}
-          in less than a week. It&apos;s all about those incremental
-          improvements. <Hashtag tabIndex={-1}>#portfolio</Hashtag>{' '}
-          <Hashtag tabIndex={-1}>#react</Hashtag>{' '}
-          <Hashtag tabIndex={-1}>#bulmacss</Hashtag>{' '}
-          <Hashtag tabIndex={-1}>#zeitnow</Hashtag>
+          <StyledText>@gatsbyjs</StyledText> in less than a week. It&apos;s all
+          about those incremental improvements.{' '}
+          <StyledText>#portfolio</StyledText> <StyledText>#react</StyledText>{' '}
+          <StyledText>#bulmacss</StyledText> <StyledText>#zeitnow</StyledText>
           <br />
           <br />
-          Check it out!{' '}
-          <a href="https://bdov.dev" target="_blank" rel="noopener noreferrer">
-            bdov.dev
-          </a>
+          Check it out! <StyledText>bdov.dev</StyledText>
           &quot;
         </h4>
       ),
@@ -93,9 +80,10 @@ const SocialSection = (): ReactElement => {
     {
       content: (
         <h4 className="content">
-          &quot;I really like React. <Hashtag tabIndex={-1}>#React</Hashtag>{' '}
-          <Hashtag tabIndex={-1}>#JavaScript</Hashtag>{' '}
-          <Hashtag tabIndex={-1}>#TypeScript</Hashtag>
+          &quot;I really like React.{' '}
+          <StyledText tabIndex={-1}>#React</StyledText>{' '}
+          <StyledText tabIndex={-1}>#JavaScript</StyledText>{' '}
+          <StyledText tabIndex={-1}>#TypeScript</StyledText>
           &quot;
         </h4>
       ),
