@@ -1,18 +1,16 @@
 import React, { ReactElement } from 'react';
 import styled from 'styled-components';
-import { Tag } from '.';
+import { Tag } from 'components';
+import theme from 'utils/theme';
 
-/**
- * Custom styled StyledH4 for skill column titles
- */
-const StyledH4 = styled.h4`
-  text-decoration-color: #8d5a97;
-  text-decoration-line: underline;
+// Styled divider line
+const Divider = styled.hr`
+  border-top: 2px solid ${theme.palette.purple};
+  margin: 1.5em auto 1.5em;
+  width: 35%;
 `;
 
-/**
- * Skill object type
- */
+// Skill object type
 export interface Skill {
   skill: string;
   interest: boolean;
@@ -28,9 +26,10 @@ const Skills = (): ReactElement => {
     { skill: 'TypeScript', interest: true },
     { skill: 'HTML', interest: false },
     { skill: 'CSS', interest: false },
-    { skill: 'C', interest: false },
     { skill: 'SQL', interest: false },
-    { skill: 'NoSQL', interest: true }
+    { skill: 'NoSQL', interest: true },
+    { skill: 'C', interest: false },
+    { skill: 'Bash', interest: false }
   ];
 
   const frameworks: Skill[] = [
@@ -38,6 +37,7 @@ const Skills = (): ReactElement => {
     { skill: 'React Native', interest: true },
     { skill: 'Node.js', interest: true },
     { skill: 'Redux', interest: true },
+    { skill: 'Jest', interest: true },
     { skill: 'Express', interest: false },
     { skill: 'Flask', interest: true },
     { skill: 'MySQL', interest: false },
@@ -48,6 +48,7 @@ const Skills = (): ReactElement => {
     { skill: 'Linux', interest: true },
     { skill: 'Nginx', interest: true },
     { skill: 'Git', interest: true },
+    { skill: 'Puppet', interest: false },
     { skill: 'Fabric', interest: false },
     { skill: 'VSCode', interest: true },
     { skill: 'Vim', interest: true },
@@ -60,9 +61,10 @@ const Skills = (): ReactElement => {
       <h3 className="title is-4 has-text-white">My skills/interests:</h3>
       <div className="columns is-flex-tablet">
         <div className="column is-flex has-tags">
-          <StyledH4 className="title is-5 has-text-centered has-text-white">
+          <h4 className="title is-5 is-marginless has-text-centered has-text-white">
             Languages
-          </StyledH4>
+          </h4>
+          <Divider />
           <div className="tags are-medium is-centered">
             {languages.map(
               (language: Skill, index: number): ReactElement => (
@@ -76,9 +78,10 @@ const Skills = (): ReactElement => {
           </div>
         </div>
         <div className="column is-flex has-tags">
-          <StyledH4 className="title is-5 has-text-centered has-text-white">
+          <h4 className="title is-5 is-marginless has-text-centered has-text-white">
             Frameworks
-          </StyledH4>
+          </h4>
+          <Divider />
           <div className="tags are-medium is-centered">
             {frameworks.map(
               (framework: Skill, index: number): ReactElement => (
@@ -92,9 +95,10 @@ const Skills = (): ReactElement => {
           </div>
         </div>
         <div className="column is-flex has-tags">
-          <StyledH4 className="title is-5 has-text-centered has-text-white">
+          <h4 className="title is-5 is-marginless has-text-centered has-text-white">
             Tools
-          </StyledH4>
+          </h4>
+          <Divider />
           <div className="tags are-medium is-centered">
             {tools.map(
               (tool: Skill, index: number): ReactElement => (
