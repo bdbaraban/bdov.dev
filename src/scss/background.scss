@@ -15,7 +15,7 @@ body {
 
 #title {
   .triangle {
-    background: linear-gradient(to right, $blue, $dark-blue);
+    background: linear-gradient(to right, $dark-blue, $blue);
     -webkit-clip-path: polygon(50% 0%, 100% 0, 100% 65%, 50% 100%, 0 65%, 0 0);
     clip-path: polygon(50% 0%, 100% 0, 100% 65%, 50% 100%, 0 65%, 0 0);
   }
@@ -23,7 +23,7 @@ body {
 
 #about {
   .hero-body {
-    background: $dark-blue;
+    background: $medium-blue;
     border-radius: 4px;
   }
 }
@@ -35,4 +35,8 @@ body {
     clip-path: polygon(100% 100%, 100% 35%, 50% 0, 0 35%, 0 100%);
     height: calc(100% + 100px);
   }
+}
+
+.footer {
+  background: linear-gradient(to right, $blue, $dark-blue);
 }
