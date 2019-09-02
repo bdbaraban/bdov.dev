@@ -3,15 +3,8 @@ import styled from 'styled-components';
 import { Avatar, Code } from 'components';
 import device from 'utils/device';
 
-// Custom styled Bulma CSS hero
-const StyledHero = styled.div`
-  margin-bottom: 1.5em;
-`;
-
 // Custom styled Bulma CSS hero-body
 const StyledHeroBody = styled.div`
-  margin-left: 0 !important;
-  margin-right: 0 !important;
   margin-top: 75px;
   @media (min-width: ${device.desktop}px) {
     margin-top: 0;
@@ -33,7 +26,7 @@ const StyledColumn = styled.div`
  */
 const TitleSection = (): ReactElement => {
   return (
-    <StyledHero id="title" className="hero is-fullheight">
+    <section id="title" className="hero is-fullheight">
       <div className="triangle" />
       <div className="hero-head" />
       <StyledHeroBody className="hero-body">
@@ -49,7 +42,7 @@ const TitleSection = (): ReactElement => {
         </div>
       </StyledHeroBody>
       <div className="hero-foot" />
-    </StyledHero>
+    </section>
   );
 };
 
