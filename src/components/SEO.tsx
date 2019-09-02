@@ -11,20 +11,22 @@ interface MetaObject {
 
 // SEO component prop types
 interface SEOProps {
+  title: string;
   description?: string;
+  pathname?: string;
   lang?: string;
   meta?: MetaObject[];
-  title: string;
 }
 
 /**
  * Search engine optimatization component
  */
 const SEO = ({
+  title,
   description = '',
+  pathname = '/',
   lang = 'en',
-  meta = [],
-  title
+  meta = []
 }: SEOProps): ReactElement => {
   const { site } = useStaticQuery(
     graphql`
@@ -32,8 +34,11 @@ const SEO = ({
         site {
           siteMetadata {
             title
+            titleTemplate
             description
-            author
+            url
+            image
+            twitterUsername
           }
         }
       }
@@ -41,6 +46,7 @@ const SEO = ({
   );
 
   const metaDescription = description || site.siteMetadata.description;
+  const metaUrl = `${site.siteMetadata.url}${pathname}`;
 
   return (
     <Helmet
@@ -48,7 +54,7 @@ const SEO = ({
         lang
       }}
       title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
+      titleTemplate={site.siteMetadata.titleTemplate}
       meta={[
         {
           name: `description`,
@@ -59,6 +65,10 @@ const SEO = ({
           content: title
         },
         {
+          property: `og:image`,
+          content: `${site.siteMetadata.url}${site.siteMetadata.image}`
+        },
+        {
           property: `og:description`,
           content: metaDescription
         },
@@ -67,12 +77,16 @@ const SEO = ({
           content: `website`
         },
         {
+          property: `og:url`,
+          content: metaUrl
+        },
+        {
           name: `twitter:card`,
           content: `summary`
         },
         {
           name: `twitter:creator`,
-          content: site.siteMetadata.author
+          content: site.siteMetadata.twitterUsername
         },
         {
           name: `twitter:title`,
@@ -81,6 +95,10 @@ const SEO = ({
         {
           name: `twitter:description`,
           content: metaDescription
+        },
+        {
+          property: `twitter:image`,
+          content: `${site.siteMetadata.url}${site.siteMetadata.image}`
         }
       ].concat(meta)}
     />
