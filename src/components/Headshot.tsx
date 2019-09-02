@@ -8,7 +8,7 @@ import Img from 'gatsby-image';
 const Headshot = (): ReactElement => {
   const data = useStaticQuery(graphql`
     query {
-      placeholderImage: file(relativePath: { eq: "headshot.jpg" }) {
+      placeholderImage: file(relativePath: { eq: "images/headshot.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 200, maxHeight: 200) {
             ...GatsbyImageSharpFluid
