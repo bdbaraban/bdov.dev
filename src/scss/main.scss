@@ -17,13 +17,32 @@ $family-primary: $family-sans-serif;
 
 @import 'bulma/bulma';
 
+#title {
+  margin-bottom: 1.5em;
+}
+
+#contact {
+  padding-bottom: 1.5em;
+}
+
 .hero-body {
-  margin-left: 5px;
-  margin-right: 5px;
+  margin-left: 0;
+  margin-right: 0;
   z-index: 2;
   @media (min-width: $tablet) {
     margin-left: 100px;
     margin-right: 100px;
+  }
+}
+
+#about {
+  .hero-body {
+    margin-left: 5px;
+    margin-right: 5px;
+    @media (min-width: $tablet) {
+      margin-left: 100px;
+      margin-right: 100px;
+    }
   }
 }
 
@@ -72,14 +91,23 @@ $family-primary: $family-sans-serif;
 
 .footer {
   align-items: center;
+  background: $blue;
   display: flex;
-  height: 100px;
-  justify-content: center;
+  flex-direction: row;
+  height: 50px;
+  justify-content: space-between;
   left: 0;
-  padding: 0;
+  padding-bottom: 0;
+  padding-top: 0;
   position: absolute;
   right: 0;
   z-index: 30;
+}
+
+.content {
+  &.footer {
+    margin-bottom: 0;
+  }
 }
 
 .is-transparent {
@@ -154,6 +182,13 @@ span.tag {
 .social-icon {
   font-size: 2em;
   color: $black;
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.footer-icon {
+  color: #fff;
   &:hover {
     opacity: 0.7;
   }
