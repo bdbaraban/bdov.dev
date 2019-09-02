@@ -28,6 +28,7 @@ const Skills = (): ReactElement => {
     { skill: 'CSS', interest: false },
     { skill: 'SQL', interest: false },
     { skill: 'NoSQL', interest: true },
+    { skill: 'Rust', interest: false },
     { skill: 'C', interest: false },
     { skill: 'Bash', interest: false }
   ];
@@ -38,6 +39,7 @@ const Skills = (): ReactElement => {
     { skill: 'Node.js', interest: true },
     { skill: 'Redux', interest: true },
     { skill: 'Jest', interest: true },
+    { skill: 'Testing Library', interest: true },
     { skill: 'Express', interest: false },
     { skill: 'Flask', interest: true },
     { skill: 'MySQL', interest: false },
@@ -48,6 +50,7 @@ const Skills = (): ReactElement => {
     { skill: 'Linux', interest: true },
     { skill: 'Nginx', interest: true },
     { skill: 'Git', interest: true },
+    { skill: 'CircleCI', interest: true },
     { skill: 'Puppet', interest: false },
     { skill: 'Fabric', interest: false },
     { skill: 'VSCode', interest: true },
