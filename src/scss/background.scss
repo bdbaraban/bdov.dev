@@ -3,10 +3,12 @@
 
 html,
 body {
-  background-color: $blue;
+  background: $blue;
 }
 
 .triangle {
+  -webkit-clip-path: polygon(50% 5%, 100% 50%, 50% 100%, 0 50%);
+  clip-path: polygon(50% 5%, 100% 50%, 50% 100%, 0 50%);
   height: 100%;
   position: absolute;
   width: 100%;
@@ -16,8 +18,12 @@ body {
 #title {
   .triangle {
     background: linear-gradient(to right, $dark-blue, $blue);
-    -webkit-clip-path: polygon(50% 0%, 100% 0, 100% 65%, 50% 100%, 0 65%, 0 0);
-    clip-path: polygon(50% 0%, 100% 0, 100% 65%, 50% 100%, 0 65%, 0 0);
+  }
+}
+
+#contact {
+  .triangle {
+    background: linear-gradient(to right, $blue, $dark-blue);
   }
 }
 
@@ -26,18 +32,4 @@ body {
     background: $medium-blue;
     border-radius: 4px;
   }
-}
-
-#contact {
-  background: linear-gradient(to right, $blue, $dark-blue);
-  .triangle {
-    background: $blue;
-    -webkit-clip-path: polygon(50% 0%, 100% 0, 100% 35%, 50% 0, 0 35%, 0 0);
-    clip-path: polygon(50% 0%, 100% 0, 100% 35%, 50% 0, 0 35%, 0 0);
-    height: calc(100% - 100px);
-  }
-}
-
-.footer {
-  background: linear-gradient(to right, $blue, $dark-blue);
 }
