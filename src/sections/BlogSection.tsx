@@ -72,6 +72,15 @@ const BlogSection = (): ReactElement => {
       minutes: 10,
       date: new Date('2019-01-15'),
       claps: 101
+    },
+    {
+      link: 'https://www.holbertonschool.com/coding-resource-pointers-in-c',
+      title: 'Pointers in C',
+      description:
+        'A full understanding of Python object instantiation requires an examination of one last relevant implementation - string interning.',
+      highlight: 'Commissioned for Holberton School website.',
+      minutes: 13,
+      date: new Date('2019-05-23')
     }
   ];
 
