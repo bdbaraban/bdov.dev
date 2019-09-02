@@ -1,14 +1,20 @@
 import React, { ReactElement } from 'react';
 import styled from 'styled-components';
+import theme from 'utils/theme';
 
-/**
- * Custom styled form component
- */
+// Custom styled form component
 const Form = styled.form`
-  border: 4px solid #8d5a97;
+  background: ${theme.palette.mediumBlue};
+  border: 6px solid ${theme.palette.purple};
   border-radius: 4px;
   padding: 1em;
   text-align: left;
+`;
+
+// Custom styled form field
+const Field = styled.div`
+  margin-bottom: 16px !important;
+  margin-top: 16px !important;
 `;
 
 /**
@@ -21,61 +27,49 @@ const ContactForm = (): ReactElement => {
       action="https://formspree.io/brennan@bdov.dev"
       method="POST"
     >
-      <div className="field">
-        <label htmlFor="name" className="label">
-          Your Name
-        </label>
+      <Field className="field">
         <div className="control">
           <input
             id="name"
             className="input"
             type="text"
             name="name"
-            placeholder="Jon Snow"
+            placeholder="Your name"
           />
         </div>
-      </div>
-      <div className="field">
-        <label htmlFor="email" className="label">
-          Your Email
-        </label>
+      </Field>
+      <Field className="field">
         <div className="control">
           <input
             id="email"
             className="input"
             type="email"
             name="_replyto"
-            placeholder="jon@winterfell.org"
+            placeholder="Your email"
           />
         </div>
-      </div>
-      <div className="field">
-        <label htmlFor="subject" className="label">
-          Subject
-        </label>
+      </Field>
+      <Field className="field">
         <div className="control">
           <input
             id="subject"
             className="input"
             type="text"
             name="subject"
-            placeholder="Winter is Coming"
+            placeholder="Subject"
           />
         </div>
-      </div>
-      <div className="field">
-        <label htmlFor="message" className="label">
-          Message
-        </label>
+      </Field>
+      <Field className="field">
         <div className="control">
           <textarea
             id="message"
             className="textarea"
-            placeholder="You know nothing, Brennan Baraban."
+            placeholder="Message"
             name="message"
           ></textarea>
         </div>
-      </div>
+      </Field>
       <label>
         <input type="text" name="_gotcha" style={{ display: 'none' }} />
       </label>
