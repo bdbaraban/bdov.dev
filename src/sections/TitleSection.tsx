@@ -10,9 +10,21 @@ const StyledHero = styled.div`
 
 // Custom styled Bulma CSS hero-body
 const StyledHeroBody = styled.div`
-  margin-top: 100px;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  margin-top: 75px;
   @media (min-width: ${device.desktop}px) {
     margin-top: 0;
+  }
+`;
+
+// Custom styled Bulma CSS hero-body
+const StyledColumn = styled.div`
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  @media (min-width: ${device.tablet}px) {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
   }
 `;
 
@@ -27,9 +39,9 @@ const TitleSection = (): ReactElement => {
       <StyledHeroBody className="hero-body">
         <div className="level is-flex is-fullwidth is-hcentered">
           <div className="columns is-desktop is-fullwidth is-vcentered">
-            <div className="column is-full-touch is-one-half-desktop">
+            <StyledColumn className="column is-full-touch is-one-half-desktop">
               <Avatar />
-            </div>
+            </StyledColumn>
             <div id="code" className="column is-full-touch is-one-half-desktop">
               <Code />
             </div>

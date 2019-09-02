@@ -5,6 +5,7 @@ import { ContactForm } from 'components';
 
 // Custom styled Bulma CSS hero-body
 const StyledHeroBody = styled.div`
+  padding-bottom: 0 !important;
   @media (min-width: 1024px) {
     margin-bottom: 0;
   }
@@ -25,7 +26,7 @@ const ContactSection = (): ReactElement => {
   `);
 
   return (
-    <section id="contact" className="hero is-fullheight">
+    <section id="contact" className="hero">
       <div className="triangle" />
       <div className="hero-head" />
       <StyledHeroBody className="hero-body">
