@@ -67,19 +67,6 @@ const SocialSection = (): ReactElement => {
     {
       content: (
         <h4 className="content">
-          &quot;Mmm, got a lot in the works.{' '}
-          <Emoji label="man-technologist" symbol="👨‍💻" />
-          <Emoji label="man-technologist" symbol="👨‍💻" />
-          <Emoji label="man-technologist" symbol="👨‍💻" />
-          &quot;
-        </h4>
-      ),
-      date: new Date('2019-05-21'),
-      link: 'https://twitter.com/bdov_/status/1130893871045464064'
-    },
-    {
-      content: (
-        <h4 className="content">
           &quot;I really like React.{' '}
           <StyledText tabIndex={-1}>#React</StyledText>{' '}
           <StyledText tabIndex={-1}>#JavaScript</StyledText>{' '}
@@ -101,6 +88,24 @@ const SocialSection = (): ReactElement => {
       ),
       date: new Date('2019-04-24'),
       link: 'https://twitter.com/bdov_/status/1121148490715807744'
+    },
+    {
+      content: (
+        <h4 className="content">
+          &quot;Mmm, got a lot in the works.{' '}
+          <Emoji label="man-technologist" symbol="👨‍💻" />
+          <Emoji label="man-technologist" symbol="👨‍💻" />
+          <Emoji label="man-technologist" symbol="👨‍💻" />
+          &quot;
+        </h4>
+      ),
+      date: new Date('2019-05-21'),
+      link: 'https://twitter.com/bdov_/status/1130893871045464064'
+    },
+    {
+      content: <h4 className="content">&quot;Always learning.&quot;</h4>,
+      date: new Date('2019-01-18'),
+      link: 'https://twitter.com/bdov_/status/1086484187291344896'
     }
   ];
 
