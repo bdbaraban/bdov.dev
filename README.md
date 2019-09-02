@@ -10,8 +10,6 @@
     alt="Website"
     src="https://img.shields.io/website/https/bdov.dev?down_color=lightgrey&down_message=down&up_color=blue&up_message=up"
   >
-</p>
-<p>
   <a href="https://opensource.org/licenses/MIT">
     <img
       src="https://img.shields.io/badge/License-MIT-yellow.svg"
@@ -24,7 +22,8 @@
   <img
     src="https://github.com/bdbaraban/bdov.dev/blob/master/src/assets/images/colored-logo.png"
     alt="characters b, period and d with a blue background"
-    width="275"
+    width="200"
+    style="border-radius: 4px;"
   />
 </p>
 
@@ -36,7 +35,7 @@
 
 ## Dependencies :couple:
 
-Front-End:
+Front-End, Primary:
 
 | Tool/Library                                             | Version |
 | -------------------------------------------------------- | ------- |
@@ -49,7 +48,7 @@ Front-End:
 | [React Typist](https://jstejada.github.io/react-typist/) | ^2.0.5  |
 | [Styled Components](https://www.styled-components.com/)  | ^4.3.2  |
 
-The above is a list of the most significant dependencies used in bdov.dev. To view a complete list, check out the [package.json](./package.json).
+View the complete list of dependencies in the [package.json](./package.json).
 
 Development/Deployment:
 
@@ -66,11 +65,10 @@ Curious to play with my code live? Assuming the above development/deployment dep
 - Install dependencies: `yarn install`
 - Run Gatsby development server: `yarn develop`
 - Generate Gatsby build: `yarn build`
-- Deploy to Now: `yarn deploy-staging` or `yarn-deploy-production`
 
 ## Author :black_nib:
 
-- **Brennan D Baraban** <[bdbaraban](https://github.com/bdbaraban)>
+- **Brennan D Baraban** · <[bdbaraban](https://github.com/bdbaraban)>
 
 ## License :lock:
 
