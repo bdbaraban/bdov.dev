@@ -29,11 +29,12 @@ body {
 }
 
 #contact {
+  background: linear-gradient(to right, $blue, $dark-blue);
   .triangle {
-    background: linear-gradient(to right, $blue, $dark-blue);
-    -webkit-clip-path: polygon(100% 100%, 100% 35%, 50% 0, 0 35%, 0 100%);
-    clip-path: polygon(100% 100%, 100% 35%, 50% 0, 0 35%, 0 100%);
-    height: calc(100% + 100px);
+    background: $blue;
+    -webkit-clip-path: polygon(50% 0%, 100% 0, 100% 35%, 50% 0, 0 35%, 0 0);
+    clip-path: polygon(50% 0%, 100% 0, 100% 35%, 50% 0, 0 35%, 0 0);
+    height: calc(100% - 100px);
   }
 }
 
