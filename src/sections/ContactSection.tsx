@@ -59,7 +59,10 @@ const ContactSection = (): ReactElement => {
               </h5>
               <h5 className="title is-5 has-text-white">Or, drop me a line:</h5>
             </div>
-            <div className="column is-full-touch is-three-fifths-desktop has-text-centered">
+            <div
+              id="form-column"
+              className="column is-full-touch is-three-fifths-desktop has-text-centered"
+            >
               <ContactForm />
             </div>
           </div>
