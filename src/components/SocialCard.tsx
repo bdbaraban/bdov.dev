@@ -8,7 +8,7 @@ import { SocialCardProps } from 'utils/types';
 
 // Custom styled Bulma CSS card
 const StyledCard = styled.article`
-  border: border: 6px solid ${theme.palette.black};
+  border: 6px solid ${theme.palette.black};
 `;
 
 /**

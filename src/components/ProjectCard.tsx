@@ -6,7 +6,7 @@ import { ProjectCardProps } from 'utils/types';
 
 // Custom styled Bulma CSS card
 const StyledCard = styled.article`
-  border: border: 6px solid ${theme.palette.brown};
+  border: 6px solid ${theme.palette.brown};
 `;
 
 /**
