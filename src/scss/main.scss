@@ -8,7 +8,7 @@
 /* Import Public Sans font */
 @font-face {
   font-family: 'Public Sans';
-  src: url('assets/fonts/PublicSans-Medium.otf');
+  src: url('../assets/fonts/PublicSans-Medium.otf');
 }
 
 /* Set font */
@@ -55,6 +55,15 @@ $family-primary: $family-sans-serif;
 
 .level-item .title {
   margin-bottom: 1.5rem;
+}
+
+#form-column {
+  padding-left: 0;
+  padding-right: 0;
+  @media (min-width: $tablet) {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
 }
 
 .container form {
