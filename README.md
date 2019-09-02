@@ -1,12 +1,40 @@
-# [bdov.dev](https://bdov.dev)
+<h1 align="center">
+  <a href="https://bdov.dev">bdov.dev</a>
+</h1>
 
-The code behind the portfolio website profiling my code (so meta).
+<p align="center">
+  The code behind the portfolio website profiling my code (so meta).
+</p>
+<p align="center">
+  <img
+    alt="Website"
+    src="https://img.shields.io/website/https/bdov.dev?down_color=lightgrey&down_message=down&up_color=blue&up_message=up"
+  >
+</p>
+<p>
+  <a href="https://opensource.org/licenses/MIT">
+    <img
+      src="https://img.shields.io/badge/License-MIT-yellow.svg"
+      alt="MIT License"
+    />
+  </a>
+</p>
 
-- Blazing fast, all thanks to [GatsbyJS](https://gatsbyjs.org).
-- Beautiful and responsive, thanks [Bulma CSS](https://bulma.io/)!
-- Deployed so, so easily - I love [ZEIT Now](https://zeit.co/now).
+<p align="center">
+  <img
+    src="https://github.com/bdbaraban/bdov.dev/blob/master/src/assets/images/colored-logo.png"
+    alt="characters b, period and d with a blue background"
+    width="275"
+  />
+</p>
 
-### Dependencies :couple:
+## Features :open_mouth:
+
+- Progressive and blazing fast, all thanks to [GatsbyJS](https://gatsbyjs.org).
+- Beautiful and responsive, have I talked with you about [Bulma CSS](https://bulma.io/)?
+- Deployed continuously and so, so easily - I love [ZEIT Now](https://zeit.co/now).
+
+## Dependencies :couple:
 
 Front-End:
 
