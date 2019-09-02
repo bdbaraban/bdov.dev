@@ -8,7 +8,8 @@
     "paths": {
       "components": ["components"],
       "scss/*": ["scss/*"],
-      "sections": ["sections"]
+      "sections": ["sections"],
+      "utils/*": ["utils/*"]
     },
     "strict": true,
     "noEmit": true,
