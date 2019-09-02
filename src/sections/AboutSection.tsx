@@ -1,19 +1,28 @@
 import React, { ReactElement } from 'react';
-import { Bio, Hero, HeroHead, HeroBody, HeroFoot, Skills } from '../components';
+import styled from 'styled-components';
+import { Bio, Skills } from 'components';
 
+// Custom styled Bulma CSS hero-body
+const StyledHeroBody = styled.div`
+  padding-top: 2.5em;
+  padding-bottom: 2.5em;
+`;
+
+/**
+ * 'About Me' and skill tags hero section
+ */
 const AboutSection = (): ReactElement => {
   return (
-    <Hero id="about">
-      <div className="triangle" />
-      <HeroHead />
-      <HeroBody>
-        <div className="columns is-desktop is-vcentered">
-          <Bio />
-          <Skills />
+    <section id="about" className="hero">
+      <StyledHeroBody className="hero-body">
+        <div className="level is-flex is-fullwidth is-hcentered">
+          <div className="columns is-desktop is-vcentered">
+            <Bio />
+            <Skills />
+          </div>
         </div>
-      </HeroBody>
-      <HeroFoot className="has-text-centered" />
-    </Hero>
+      </StyledHeroBody>
+    </section>
   );
 };
 
