@@ -4,7 +4,7 @@ module.exports = {
     titleTemplate: `%s · Brennan D Baraban`,
     description: `Brennan D Baraban is a full-stack software engineer based in the San Francisco Bay Area.`,
     url: `https://bdov.dev`,
-    image: `src/assets/images/colored-logo.png`,
+    image: `/colored-logo.png`,
     twitterUsername: `@bdov_`
   },
   plugins: [
