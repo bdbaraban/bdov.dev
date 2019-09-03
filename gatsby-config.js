@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Brennan D Baraban`,
-    titleTemplate: `%s · Brennan D Baraban`,
+    title: `Brennan D Baraban: Software Engineer`,
+    titleTemplate: `%s · Brennan D Baraban: Software Engineer`,
     description: `Brennan D Baraban is a full-stack software engineer based in the San Francisco Bay Area.`,
     url: `https://bdov.dev`,
     image: `/colored-logo.png`,
