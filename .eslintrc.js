@@ -16,7 +16,8 @@ module.exports = {
     'plugin:prettier/recommended',
     'plugin:import/errors',
     'plugin:import/warnings',
-    'plugin:jsx-a11y/recommended'
+    'plugin:jsx-a11y/recommended',
+    'plugin:jest/recommended'
   ],
   plugins: [
     '@typescript-eslint',
@@ -25,10 +26,12 @@ module.exports = {
     'react-hooks',
     'prettier',
     'import',
-    'jsx-a11y'
+    'jsx-a11y',
+    'jest'
   ],
   env: {
     browser: true,
+    jest: true,
     node: true,
     es6: true
   },
