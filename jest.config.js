@@ -1,13 +1,13 @@
 module.exports = {
   transform: {
-    '^.+\\.tsx?$': 'ts-jest',
-    '^.+\\.jsx?$': '<rootDir>/jest-preprocess.js'
+    '^.+\\.(ts|tsx)$': 'ts-jest',
+    '^.+\\.(js|jsx)?$': '<rootDir>/jest.preprocess.js'
   },
-  testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.([tj]sx?)$',
+  testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|js?|tsx?|ts?)$',
   moduleNameMapper: {
     '.+\\.(css|styl|less|sass|scss)$': 'identity-obj-proxy',
     '.+\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
-      '<rootDir>/__mocks__/file-mock.js'
+      '<rootDir>/__mocks__/fileMock.js'
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
   moduleDirectories: ['node_modules', 'src', __dirname],
@@ -17,5 +17,6 @@ module.exports = {
   globals: {
     __PATH_PREFIX__: ''
   },
-  setupFiles: ['<rootDir>/loadershim.js']
+  setupFiles: ['<rootDir>/jest.loadershim.js'],
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.js']
 };
