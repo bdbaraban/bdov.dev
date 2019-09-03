@@ -20,7 +20,7 @@
 
 <p align="center">
   <img
-    src="https://github.com/bdbaraban/bdov.dev/blob/master/src/assets/images/colored-logo.png"
+    src="https://github.com/bdbaraban/bdov.dev/blob/master/static/colored-logo.png"
     alt="characters b, period and d with a blue background"
     width="200"
     style="border-radius: 4px;"
@@ -52,11 +52,13 @@ View the complete list of dependencies in the [package.json](./package.json).
 
 Development/Deployment:
 
-| Tool/Library                      | Version  |
-| --------------------------------- | -------- |
-| [Node.js](https://nodejs.org/en/) | ^10.16.3 |
-| [Now](https://zeit.co/now)        | ^16.1.1  |
-| [Yarn](https://yarnpkg.com/en/)   | ^1.17.3  |
+| Tool/Library                                          | Version  |
+| ----------------------------------------------------- | -------- |
+| [Jest](https://jestjs.io/)                            | ^24.9.0  |
+| [React Testing Library](https://testing-library.com/) | ^9.1.3   |
+| [Node.js](https://nodejs.org/en/)                     | ^10.16.3 |
+| [Now](https://zeit.co/now)                            | ^16.1.1  |
+| [Yarn](https://yarnpkg.com/en/)                       | ^1.17.3  |
 
 ## Usage :running:
 
@@ -65,6 +67,7 @@ Curious to play with my code live? Assuming the above development/deployment dep
 - Install dependencies: `yarn install`
 - Run Gatsby development server: `yarn develop`
 - Generate Gatsby build: `yarn build`
+- Run tests `yarn test`
 
 ## Author :black_nib:
 
