@@ -7,15 +7,18 @@
   },
   "private": true,
   "dependencies": {
+    "@theme-ui/color": "^0.3.5",
     "a11y-react-emoji": "^1.1.2",
     "gatsby": "^2.30.3",
     "gatsby-image": "^2.9.0",
+    "gatsby-plugin-react-helmet": "^3.8.0",
     "gatsby-plugin-sharp": "^2.12.2",
     "gatsby-plugin-theme-ui": "^0.3.5",
     "gatsby-source-filesystem": "^2.9.1",
     "gatsby-transformer-sharp": "^2.10.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-helmet": "^6.1.0",
     "theme-ui": "^0.3.5"
   },
   "devDependencies": {
