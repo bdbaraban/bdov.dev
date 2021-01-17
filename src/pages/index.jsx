@@ -1,11 +1,11 @@
 /** @jsx jsx */
 import { useState } from 'react';
 import { Box, Button, Flex, jsx } from 'theme-ui';
-import { Helmet } from 'react-helmet';
 import HomeSection from '../components/HomeSection';
 import WorkSection from '../components/WorkSection';
 import ContactSection from '../components/ContactSection';
 import DateAndTime from '../components/DateAndTime';
+import SEO from '../components/SEO';
 
 const sections = {
   home: <HomeSection />,
@@ -18,19 +18,7 @@ const Home = () => {
 
   return (
     <Box sx={{ height: '100vh', display: 'flex', padding: [4, 8, 12, 16] }}>
-      <Helmet>
-        <meta charset="utf-8" />
-        <title>Brennan D Baraban: Software Engineer</title>
-        <meta
-          name="description"
-          content="This is my personal domain - welcome!"
-        />
-        <link rel="canonical" href="https://bdov.dev" />
-        <link
-          rel="icon"
-          href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🦙</text></svg>"
-        />
-      </Helmet>
+      <SEO />
       <Flex
         sx={{
           flex: 1,
