@@ -10,7 +10,7 @@ const ContactSection = () => (
       <Link href="mailto:brennan@bdov.dev">brennan@bdov.dev.</Link>
     </Text>
     <Text>
-      Alternatively, free to connect with me on{' '}
+      Alternatively, feel free to connect with me on{' '}
       <Link
         href="https://www.linkedin.com/in/bdbaraban"
         target="_blank"
