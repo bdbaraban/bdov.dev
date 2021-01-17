@@ -31,10 +31,15 @@ const Home = () => {
           href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🦙</text></svg>"
         />
       </Helmet>
-      <Flex sx={{ flex: 1, flexDirection: ['column', null, 'row'] }}>
+      <Flex
+        sx={{
+          flex: 1,
+          flexDirection: ['column', null, 'row'],
+        }}
+      >
         <Box
-          pl={8}
-          pr={[4, null, 8]}
+          pl={[4, null, 8]}
+          pr={[2, null, 8]}
           py={4}
           sx={{
             flex: '1 1 auto',
@@ -50,13 +55,13 @@ const Home = () => {
             flexDirection: 'column',
             justifyContent: 'space-between',
             minWidth: ['100%', null, '160px'],
+            minHeight: 'min-content',
           }}
         >
           <Flex
             pl={[0, null, 8]}
             py={4}
             sx={{
-              height: 'min-content',
               borderLeft: ['none', null, '2px'],
               flexDirection: ['row', null, 'column'],
               justifyContent: 'space-around',
@@ -66,6 +71,7 @@ const Home = () => {
               sx={{
                 variant: section === 'home' ? 'buttons.solid' : 'buttons.ghost',
                 width: '100%',
+                height: '36px',
               }}
               onClick={() => setSection('home')}
             >
@@ -75,6 +81,7 @@ const Home = () => {
               sx={{
                 variant: section === 'work' ? 'buttons.solid' : 'buttons.ghost',
                 width: '100%',
+                height: '36px',
                 my: [0, null, 4],
                 mx: [4, null, 0],
               }}
@@ -87,6 +94,7 @@ const Home = () => {
                 variant:
                   section === 'contact' ? 'buttons.solid' : 'buttons.ghost',
                 width: '100%',
+                height: '36px',
               }}
               onClick={() => setSection('contact')}
             >

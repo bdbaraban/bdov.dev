@@ -27,7 +27,7 @@ const WorkSection = () => (
       </Link>
       . Notable projects include:
     </Text>
-    <ul sx={{ listStyle: 'none', m: 0, px: 4, py: 4 }}>
+    <ul sx={{ listStyle: 'none', m: 0, px: [2, null, 4], py: 4 }}>
       <ListItem
         link="https://teachwithkoala.com"
         title="Koala"
