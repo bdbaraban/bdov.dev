@@ -10,15 +10,19 @@ const formatToday = () => {
   return `${month}/${day}/${year}`;
 };
 
-const HomeSection = ({ ...rest }) => {
+const DateAndTime = ({ ...rest }) => {
   const [time, setTime] = useState('00:00:00');
-  const initialTime = useRef(new Date());
+  const initialTime = useRef();
 
   useEffect(() => {
+    if (!initialTime.current) {
+      initialTime.current = new Date();
+    }
+
     const timer = setInterval(() => {
       const now = new Date();
-      const newTime = now.getSeconds() - initialTime.current.getSeconds();
-      setTime(new Date(newTime * 1000).toISOString().substr(11, 8));
+      const passed = new Date(now - initialTime.current);
+      setTime(passed.toISOString().substr(11, 8));
     }, 1000);
 
     return () => clearInterval(timer);
@@ -32,4 +36,4 @@ const HomeSection = ({ ...rest }) => {
   );
 };
 
-export default HomeSection;
+export default DateAndTime;
