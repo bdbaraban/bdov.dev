@@ -30,31 +30,31 @@ const WorkSection = () => (
     <ul sx={{ listStyle: 'none', m: 0, px: [2, null, 4], py: 4 }}>
       <ListItem
         link="https://teachwithkoala.com"
-        title="Koala"
+        title="Koala 3D Virtual Classroom"
         date="April 2020 to Present"
         content={
           <Text sx={{ mb: 8 }}>
-            Koala is a 3D, collaborative, virtual classroom application
-            transitioned from Einstein Studios&apos; original virtual reality
-            product (see below). I work together with the CTO on the main Unity
-            application supported on Mac, Windows and web, while owning the
-            supporting web and Electron apps that handle software patching, user
-            management, and application launching. Over 300 rooms and growing
-            are being hosted in Koala per week.
+            Koala is a collaborative classroom application transitioned from
+            Einstein Studios&apos; original virtual reality product (see below).
+            I work together with the CTO on the main Unity application supported
+            on Mac, Windows, and web, while owning the supporting web and
+            Electron projects that handle software patching, user management,
+            and application launching. Over 300 rooms are being hosted in Koala
+            per week, and we are actively growing!
           </Text>
         }
       />
       <ListItem
         link="https://app.einsteinstudios.io"
-        title="Einstein Studios Web Platform"
+        title="Tutoring Web Platforms"
         date="September 2019 to April 2020"
         content={
           <Text>
             When I joined the team, Einstein Studios offered a virtual reality
             application where we connected children with Spanish and reading
-            tutors. I came on in an independent role to build parent, tutor, and
+            tutors. I started in an independent role to build parent, tutor, and
             administrator web platforms managing user onboarding, tutor-student
-            recurrent scheduling, and subscription processing. The application
+            recurring scheduling, and payments processing. The application
             reached up to ~300 users before the company shifted efforts to Koala
             (see above).
           </Text>
