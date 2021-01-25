@@ -1,4 +1,4 @@
-# [bdov.dev](https://bdov.dev)
+# 🦙 [bdov.dev](https://bdov.dev)
 
 Web page for my personal domain. Built with [GatsbyJS](https://www.gatsbyjs.com/) & [Theme UI](https://theme-ui.com/), deployed on [Vercel](https://vercel.com).
 
