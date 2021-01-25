@@ -2,14 +2,14 @@
 import { useState } from 'react';
 import { Box, Button, Flex, jsx } from 'theme-ui';
 import HomeSection from '../components/HomeSection';
-import WorkSection from '../components/WorkSection';
+import CareerSection from '../components/CareerSection';
 import ContactSection from '../components/ContactSection';
 import DateAndTime from '../components/DateAndTime';
 import SEO from '../components/SEO';
 
 const sections = {
   home: <HomeSection />,
-  work: <WorkSection />,
+  career: <CareerSection />,
   contact: <ContactSection />,
 };
 
@@ -17,14 +17,9 @@ const Home = () => {
   const [section, setSection] = useState('home');
 
   return (
-    <Box sx={{ height: '100vh', display: 'flex', padding: [4, 8, 12, 16] }}>
+    <Box sx={{ height: '100vh', display: 'flex', padding: [4, 8, 12, 14] }}>
       <SEO />
-      <Flex
-        sx={{
-          flex: 1,
-          flexDirection: ['column', null, 'row'],
-        }}
-      >
+      <Flex sx={{ flex: 1, flexDirection: ['column', null, 'row'] }}>
         <Box
           pl={[4, null, 8]}
           pr={[2, null, 8]}
@@ -63,19 +58,21 @@ const Home = () => {
               }}
               onClick={() => setSection('home')}
             >
-              Home
+              /
             </Button>
             <Button
               sx={{
-                variant: section === 'work' ? 'buttons.solid' : 'buttons.ghost',
+                variant:
+                  section === 'career' ? 'buttons.solid' : 'buttons.ghost',
                 width: '100%',
                 height: '36px',
+                justifyContent: ['center', null, 'flex-start'],
                 my: [0, null, 4],
                 mx: [4, null, 0],
               }}
-              onClick={() => setSection('work')}
+              onClick={() => setSection('career')}
             >
-              Work
+              /career
             </Button>
             <Button
               sx={{
@@ -86,7 +83,7 @@ const Home = () => {
               }}
               onClick={() => setSection('contact')}
             >
-              Contact
+              /contact
             </Button>
           </Flex>
           <DateAndTime

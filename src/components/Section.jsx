@@ -2,7 +2,7 @@
 import { jsx } from 'theme-ui';
 
 const Section = ({ children, sx, ...rest }) => (
-  <div
+  <section
     sx={{
       display: 'grid',
       gridGap: 4,
@@ -12,7 +12,7 @@ const Section = ({ children, sx, ...rest }) => (
     {...rest}
   >
     {children}
-  </div>
+  </section>
 );
 
 export default Section;
