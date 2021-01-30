@@ -19,7 +19,6 @@ const use100vh = () => {
     }
 
     const setMeasuredHeight = () => {
-      console.log('setMeasuredHeight()');
       if (!isClient()) {
         setHeight(null);
       } else if (!document.documentElement) {
