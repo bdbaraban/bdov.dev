@@ -6,6 +6,7 @@ import CareerSection from '../components/CareerSection';
 import ContactSection from '../components/ContactSection';
 import DateAndTime from '../components/DateAndTime';
 import SEO from '../components/SEO';
+import use100vh from '../hooks/use100vh';
 
 const sections = {
   home: <HomeSection />,
@@ -15,9 +16,16 @@ const sections = {
 
 const Home = () => {
   const [section, setSection] = useState('home');
+  const height = use100vh();
 
   return (
-    <Box sx={{ height: '100vh', display: 'flex', padding: [4, 8, 12, 14] }}>
+    <Box
+      sx={{
+        height: height ? `${height}px` : '100vh',
+        display: 'flex',
+        padding: [4, 8, 12, 14],
+      }}
+    >
       <SEO />
       <Flex sx={{ flex: 1, flexDirection: ['column', null, 'row'] }}>
         <Box

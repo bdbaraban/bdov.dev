@@ -123,7 +123,7 @@ const CareerSection = () => (
         schedule and the initiative to try something I had always thought
         intriguing, I took Intro to Programming. I was hooked, and I determined
         to pursue a career in software engineering without restarting a degree.
-        By the time I graduated, I had accepted my admittance to Holberton.
+        By the time I graduated, I had committed to Holberton.
       </Text>
     </Article>
 
