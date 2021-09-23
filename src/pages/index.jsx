@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Box, Button, Flex, jsx } from 'theme-ui';
 import HomeSection from '../components/HomeSection';
 import CareerSection from '../components/CareerSection';
@@ -21,14 +21,18 @@ const hashes = {
 };
 
 const Home = () => {
-  const hash = window.location.hash.substr(1);
-  const [section, setSection] = useState(hashes[hash] || 'home');
+  const [section, setSection] = useState('home');
   const height = use100vh();
 
   const handleClick = (key) => {
     setSection(key);
     window.location.hash = hashes[key];
   };
+
+  useEffect(() => {
+    const hash = window.location.hash.substr(1);
+    setSection(hashes[hash] || 'home');
+  }, []);
 
   return (
     <Box
