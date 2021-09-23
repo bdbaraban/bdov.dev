@@ -14,9 +14,21 @@ const sections = {
   contact: <ContactSection />,
 };
 
+const hashes = {
+  home: '',
+  career: 'career',
+  contact: 'contact',
+};
+
 const Home = () => {
-  const [section, setSection] = useState('home');
+  const hash = window.location.hash.substr(1);
+  const [section, setSection] = useState(hashes[hash] || 'home');
   const height = use100vh();
+
+  const handleClick = (key) => {
+    setSection(key);
+    window.location.hash = hashes[key];
+  };
 
   return (
     <Box
@@ -64,7 +76,7 @@ const Home = () => {
                 width: '100%',
                 height: '36px',
               }}
-              onClick={() => setSection('home')}
+              onClick={() => handleClick('home')}
             >
               /
             </Button>
@@ -78,7 +90,7 @@ const Home = () => {
                 my: [0, null, 4],
                 mx: [4, null, 0],
               }}
-              onClick={() => setSection('career')}
+              onClick={() => handleClick('career')}
             >
               /career
             </Button>
@@ -89,7 +101,7 @@ const Home = () => {
                 width: '100%',
                 height: '36px',
               }}
-              onClick={() => setSection('contact')}
+              onClick={() => handleClick('contact')}
             >
               /contact
             </Button>
