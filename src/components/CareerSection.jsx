@@ -46,12 +46,26 @@ const ListItem = ({ title, link, content, contentProps }) => (
 const CareerSection = () => (
   <Section sx={{ gridGap: 8 }}>
     <Article
+      title="Shef"
+      date="April 2021 to Present"
+      emoji={<Emoji symbol="👩‍🍳" label="woman cook" />}
+    >
+      <Text>
+        I am a currently a full-stack engineer at{' '}
+        <Link href="https://shef.com" target="_blank" rel="noopener noreferrer">
+          Shef
+        </Link>
+        .
+      </Text>
+    </Article>
+
+    <Article
       title="Einstein Studios"
-      date="September 2019 to Present"
+      date="September 2019 to March 2021"
       emoji={<Emoji symbol="🐨" label="koala" />}
     >
       <Text>
-        I am the Lead Software Engineer at{' '}
+        My first engineering job was with{' '}
         <Link
           href="https://www.linkedin.com/company/einstein-studios/"
           target="_blank"
@@ -59,23 +73,23 @@ const CareerSection = () => (
         >
           Einstein Studios
         </Link>
-        . Notable projects include:
+        . We were a small (&lt; 10 people) team where I was the second engineer
+        after the CTO. I led two major projects at Einstein:
       </Text>
       <List
         listItems={[
           {
             link: 'https://teachwithkoala.com',
             title: 'Koala 3D Virtual Classroom',
-            date: 'April 2020 to Present',
+            date: 'April 2020 to March 2021',
             content: (
               <React.Fragment>
                 Koala is a collaborative classroom application transitioned from
                 Einstein Studios&apos; original virtual reality product (read
-                below). I work together with the CTO on the main Unity
+                below). I worked together with the CTO on the main Unity
                 application supported on Mac, Windows, and web while owning the
-                web and Electron projects that handle software patching, user
-                management, and application launching. Over ~400 rooms are being
-                hosted in Koala per week, and we are actively growing!
+                web and Electron projects that handled software patching, user
+                management, and application launching.
               </React.Fragment>
             ),
           },
@@ -90,8 +104,8 @@ const CareerSection = () => (
                 reading tutors. I started in an independent role to build
                 parent, tutor, and administrator web platforms managing user
                 onboarding, tutor-student recurring scheduling, and payments
-                processing. The application reached up to ~300 users before the
-                company shifted efforts to Koala (read above).
+                processing. The application reached up to ~300 users before we
+                shifted efforts to Koala (read above).
               </React.Fragment>
             ),
           },
