@@ -1,14 +1,7 @@
-/** @jsx jsx */
-import { useEffect, useRef, useState } from 'react';
-import { Box, jsx, Text } from 'theme-ui';
-
-const formatToday = () => {
-  const datetime = new Date();
-  const month = datetime.getMonth() + 1;
-  const day = datetime.getDate();
-  const year = datetime.getFullYear();
-  return `${month}/${day}/${year}`;
-};
+/** @jsxImportSource theme-ui */
+import React, { useEffect, useRef, useState } from 'react';
+import { Box, Text } from 'theme-ui';
+import MonthDayYear from './building-blocks/MonthDayYear';
 
 const DateAndTime = ({ ...rest }) => {
   const [time, setTime] = useState('00:00:00');
@@ -16,13 +9,16 @@ const DateAndTime = ({ ...rest }) => {
 
   useEffect(() => {
     if (!initialTime.current) {
-      initialTime.current = new Date();
+      initialTime.current = performance.now();
     }
 
     const timer = setInterval(() => {
-      const now = new Date();
-      const passed = new Date(now - initialTime.current);
-      setTime(passed.toISOString().substr(11, 8));
+      const now = performance.now();
+      const ms = now - initialTime.current;
+
+      const date = new Date(0);
+      date.setMilliseconds(ms);
+      setTime(date.toISOString().substring(11, 19));
     }, 1000);
 
     return () => clearInterval(timer);
@@ -30,7 +26,7 @@ const DateAndTime = ({ ...rest }) => {
 
   return (
     <Box {...rest}>
-      <Text>{formatToday()}</Text>
+      <MonthDayYear date={new Date()} />
       <Text>{time}</Text>
     </Box>
   );

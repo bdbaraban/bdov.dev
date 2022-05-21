@@ -1,10 +1,10 @@
-/** @jsx jsx */
-import { useEffect, useState } from 'react';
-import { Box, Button, Flex, jsx } from 'theme-ui';
-import HomeSection from '../components/HomeSection';
+/** @jsxImportSource theme-ui */
+import React, { useEffect, useState } from 'react';
+import { Box, Button, Flex } from 'theme-ui';
 import CareerSection from '../components/CareerSection';
 import ContactSection from '../components/ContactSection';
 import DateAndTime from '../components/DateAndTime';
+import HomeSection from '../components/HomeSection';
 import SEO from '../components/SEO';
 import use100vh from '../hooks/use100vh';
 
@@ -30,7 +30,7 @@ const Home = () => {
   };
 
   useEffect(() => {
-    const hash = window.location.hash.substr(1);
+    const hash = window.location.hash.substring(1);
     setSection(hashes[hash] || 'home');
   }, []);
 
