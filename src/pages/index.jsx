@@ -81,6 +81,7 @@ const Home = () => {
                 height: '36px',
               }}
               onClick={() => handleClick('home')}
+              data-goatcounter-click="home-bdov.dev"
             >
               /
             </Button>
@@ -95,6 +96,7 @@ const Home = () => {
                 mx: [4, null, 0],
               }}
               onClick={() => handleClick('career')}
+              data-goatcounter-click="career-bdov.dev"
             >
               /career
             </Button>
@@ -106,6 +108,7 @@ const Home = () => {
                 height: '36px',
               }}
               onClick={() => handleClick('contact')}
+              data-goatcounter-click="contact-bdov.dev"
             >
               /contact
             </Button>
