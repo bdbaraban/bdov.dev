@@ -14,9 +14,9 @@ export default {
     black: '#000',
     white: '#fff',
     text: '#000',
-    background: '#fbfbff',
+    background: '#fff',
     primary: '#0d1f2d',
-    secondary: '#b99f65',
+    secondary: '#8d6346',
   },
   fonts: {
     body: 'Recursive, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif',
@@ -107,7 +107,7 @@ export default {
     xl: '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
     '2xl': '0 25px 50px -12px rgba(0, 0, 0, 0.25)',
     inner: 'inset 0 2px 4px 0 rgba(0, 0, 0, 0.06)',
-    outline: '0 0 0 3px rgba(66, 153, 225, 0.5)',
+    outline: '0 0 0 3px rgba(141, 99, 70, 0.5)',
     none: 'none',
   },
   space: [
@@ -179,7 +179,7 @@ export default {
         boxShadow: 'outline',
       },
       '&:hover': {
-        backgroundColor: '#f3f4f5',
+        backgroundColor: '#f5f5f5',
       },
     },
   },

@@ -32,7 +32,7 @@ const CareerSection = () => (
 
       <Article
         icon={<Emoji symbol="🐨" label="koala" />}
-        title="Einstein Studios"
+        title="Koala"
         subtitle="September 2019 to March 2021"
       >
         <Text>
@@ -42,12 +42,12 @@ const CareerSection = () => (
             target="_blank"
             rel="noopener noreferrer"
           >
-            Einstein Studios (YC W22)
+            Koala (YC W22)
           </Link>
-          , where I built Koala, a 3D collaborative classroom application for
+          , where I worked on a 3D collaborative classroom application for
           independent tutors. I launched parent, tutor, and administrator web
-          platforms for our Oculus VR Spanish and reading tutoring application,
-          and worked together with the CTO on the primary Unity and Electron
+          platforms for our Oculus VR Spanish and reading tutoring service, and
+          worked together with the CTO on the primary Unity and Electron
           products supported on Mac, Windows, and WebGL.
         </Text>
       </Article>
