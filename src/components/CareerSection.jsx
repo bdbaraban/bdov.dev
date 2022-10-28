@@ -6,18 +6,36 @@ import Article from './building-blocks/Article';
 import Content from './building-blocks/Content';
 import Section from './building-blocks/Section';
 
-const updatedAt = new Date('2022-05-20T08:00:00.000Z');
+const updatedAt = new Date('2022-10-28T08:00:00.000Z');
 
 const CareerSection = () => (
   <Section updatedAt={updatedAt}>
     <Content sx={{ gap: 8 }}>
       <Article
-        icon={<Emoji symbol="‍👩‍🍳" label="woman cook" />}
-        title="Shef"
-        subtitle="April 2021 to Present"
+        icon={<Emoji symbol="‍‍👾" label="alien monster" />}
+        title="Discord"
+        subtitle="September 2022 to Present"
       >
         <Text>
-          I am currently a full-stack engineer at{' '}
+          I am a software engineer on the Premium Products team at{' '}
+          <Link
+            href="https://discord.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Discord
+          </Link>
+          , building Nitro subscriber perks.
+        </Text>
+      </Article>
+
+      <Article
+        icon={<Emoji symbol="‍👩‍🍳" label="woman cook" />}
+        title="Shef"
+        subtitle="April 2021 to July 2022"
+      >
+        <Text>
+          I was a software engineer at{' '}
           <Link
             href="https://shef.com"
             target="_blank"
@@ -25,8 +43,8 @@ const CareerSection = () => (
           >
             Shef (YC W19)
           </Link>
-          , building our consumer web experience, chef onboarding and supply
-          platform, internal administrator tooling, and everything in-between.
+          , where I developed the consumer web experience, chef onboarding and supply
+          platform, and internal administrator tooling.
         </Text>
       </Article>
 
